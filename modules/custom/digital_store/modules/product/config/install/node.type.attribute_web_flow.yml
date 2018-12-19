@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store_product
+    - menu_ui
+third_party_settings:
+  digital_store_product:
+    is_product_attribute: 1
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Attribute - Web Flow'
+type: attribute_web_flow
+description: 'Product Attribute: Customer-Facing Web Flow'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

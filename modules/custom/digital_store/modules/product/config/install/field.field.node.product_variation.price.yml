@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.price
+    - node.type.product_variation
+  module:
+    - digital_store
+id: node.product_variation.price
+field_name: price
+entity_type: node
+bundle: product_variation
+label: Price
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  available_currencies:
+    USD: USD
+field_type: price

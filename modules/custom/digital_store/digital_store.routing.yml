@@ -1,0 +1,16 @@
+digital_store.admin_digital_store:
+  path: '/admin/digital_store'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Digital Store'
+  requirements:
+    _permission: 'access digital_store administration pages'
+
+digital_store.configuration:
+  path: '/admin/digital_store/config'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::overview'
+    link_id: 'digital_store.configuration'
+    _title: 'Configuration'
+  requirements:
+    _permission: 'access digital_store administration pages'

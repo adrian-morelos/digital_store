@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.attribute_header_summary.attribute_subheader
+    - field.field.node.attribute_header_summary.attribute_summary
+    - node.type.attribute_header_summary
+  module:
+    - text
+id: node.attribute_header_summary.default
+targetEntityType: node
+bundle: attribute_header_summary
+mode: default
+content:
+  attribute_subheader:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  attribute_summary:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: 'Your awesome Item Summary goes here!.'
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

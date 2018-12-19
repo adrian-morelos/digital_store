@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.attribute_summary
+    - node.type.attribute_header_summary
+  module:
+    - text
+id: node.attribute_header_summary.attribute_summary
+field_name: attribute_summary
+entity_type: node
+bundle: attribute_header_summary
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: null
+settings: {  }
+field_type: text_long

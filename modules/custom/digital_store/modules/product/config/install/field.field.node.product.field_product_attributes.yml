@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_attributes
+    - node.type.attribute_header_summary
+    - node.type.attribute_web_flow
+    - node.type.product
+id: node.product.field_product_attributes
+field_name: field_product_attributes
+entity_type: node
+bundle: product
+label: 'Product Attributes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: product_attribute_selection
+  handler_settings:
+    product_attribute:
+      is_product_attribute: 1
+    target_bundles:
+      attribute_web_flow: attribute_web_flow
+      attribute_header_summary: attribute_header_summary
+field_type: entity_reference

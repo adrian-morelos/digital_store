@@ -1,0 +1,193 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Digital Store theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function digital_store_theme_preprocess_html(&$variables) {
+  /* @var Drupal\Core\Language\LanguageInterface */
+  $language = \Drupal::languageManager()->getCurrentLanguage();
+  $site_language = $language->getId();
+  $site_language_direction = $language->getDirection();
+  $request = \Drupal::request();
+
+  // Clean up the lang attributes
+  $variables['html_attributes'] = 'lang="' . $site_language . '" dir="' . $site_language_direction . '"';
+
+  // Classes for body element. Allows advanced theming based on context
+  $is_front_page = \Drupal::service('path.matcher')->isFrontPage();
+  if (!$is_front_page) {
+    $path = trim($request->getRequestUri(), '/');
+    // Add unique class for each website section.
+    $arg = explode('/', $path);
+    $section = $arg[0];
+    if ($arg[0] == 'node' && isset($arg[1])) {
+      if ($arg[1] == 'add') {
+        $section = 'node-add';
+      }
+      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
+        $section = 'node-' . $arg[2];
+      }
+    }
+    $variables['attributes']['class'][] = \Drupal\Component\Utility\Html::getClass('section-' . $section);
+  }
+
+  // Store the menu item since it has some useful information.
+  if ($request->attributes->get('view_id')) {
+    $variables['attributes']['class'][] = 'views-page';
+  }
+  elseif ($request->attributes->get('panel')) {
+    $variables['attributes']['class'][] = 'panels-page';
+  }
+  // If on a node add or edit page, add a node-layout class.
+  $current_path = \Drupal::service('path.current')->getPath();
+  if ($current_path == "/product-category/plugins") {
+    $variables['#attached']['library'][] = 'digital_store_theme/product_category_plugins';
+  }
+  $site_config = \Drupal::config('system.site');
+  $variables['logo'] = theme_get_setting('logo.url');
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+}
+
+/**
+ * Implements template_preprocess_page() for Page document templates.
+ */
+function digital_store_theme_preprocess_page(&$variables) {
+  $variables['theme_path'] = $variables['base_path'] . $variables['directory'];
+}
+
+/**
+ * Implements template_preprocess_node
+ *
+ * Add template suggestions and classes
+ */
+function digital_store_theme_preprocess_node(&$variables) {
+  // Node entity.
+  $node = $variables['node'];
+  /* @var \Drupal\node\NodeInterface $node */
+  $bundle = $node->bundle();
+  // Add node--node_type--view_mode.html.twig suggestions
+  $variables['theme_hook_suggestions'][] = 'node__' . $bundle . '__' . $variables['view_mode'];
+  // Add node--view_mode.html.twig suggestions
+  $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
+  // Add a class for the view mode.
+  if (!$variables['teaser']) {
+    $variables['content_attributes']['class'][] = 'view-mode-' . $variables['view_mode'];
+  }
+  $variables['title_attributes']['class'][] = 'node-title';
+}
+
+/**
+ * Implements hook_page_attachments_alter
+ *
+ * Add custom meta tags to the header.
+ */
+function digital_store_theme_page_attachments_alter(&$page) {
+  // Remove Generator Tag.
+  foreach ($page['#attached']['html_head'] as $key => $attachment) {
+    if (isset($attachment[1]) && ($attachment[1] == 'system_meta_generator')) {
+      unset($page['#attached']['html_head'][$key]);
+    }
+  }
+  // Force IE to use Chrome Frame if installed.
+  $page['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'content' => 'ie=edge, chrome=1',
+        'http-equiv' => 'x-ua-compatible',
+      ],
+    ],
+    'chrome_frame'
+  ];
+
+  // Remove image toolbar in IE.
+  $page['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'http-equiv' => 'ImageToolbar',
+        'content' => 'false',
+      ],
+    ],
+    'ie_image_toolbar'
+  ];
+}
+
+/**
+ * Implements hook_preprocess_block()
+ */
+function digital_store_theme_preprocess_block(&$variables) {
+  // ksm($variables);
+  // Convenience variable for block headers.
+  $title_class = &$variables['title_attributes']['class'];
+  // Generic block header class.
+  $title_class[] = 'block-title';
+  $region = isset($variables['configuration']['region']) ? $variables['configuration']['region'] : '';
+  if ($region == 'header') {
+    $title_class[] = 'visually-hidden';
+  }
+  // Add a unique class for each block for styling.
+  if (isset($variables['attributes']['id'])) {
+    $id = $variables['attributes']['id'];
+    $terms = str_replace('--', '-', $id);
+    $terms = str_replace('block-digital-store-theme-', '', $terms);
+    $items = explode('-', $terms);
+    $terms = [];
+    foreach ($items as $delta => $item) {
+      $terms[] = $item[0];
+    }
+    $class = 'b-' . implode('-', $terms);
+    $variables['attributes']['class'][] = $class;
+    // Add Class by block.
+    switch ($id) {
+      case 'block-digital-store-theme-branding':
+        $variables['attributes']['class'][] = 'col-md-3';
+        break;
+
+      case 'block-searchblockform':
+        $variables['attributes']['class'][] = 'col-md-5';
+        break;
+
+      case 'block-mainnavigation':
+        $variables['attributes']['class'][] = 'col-md-12';
+        break;
+
+      case 'block-useraccountmenu':
+        $variables['attributes']['class'][] = 'col-md-3';
+        break;
+
+      default;
+    }
+    if (strpos($id, 'block-footer') !== FALSE) {
+      $variables['attributes']['class'][] = 'col-md-3';
+    }
+  }
+
+  switch ($region) {
+    case 'header':
+      $variables['attributes']['class'][] = 'header';
+      break;
+
+    default;
+  }
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ *
+ * Adds the "title" variable so that the current page can be added as a breadcrumb.
+ */
+function digital_store_theme_preprocess_breadcrumb(&$variables) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+  $variables['title'] = $title;
+}

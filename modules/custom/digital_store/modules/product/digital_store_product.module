@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * Defines the Product entity and associated features.
+ */
+
+use Drupal\node\NodeTypeInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\digital_store_product\Entity\Product;
+use Drupal\digital_store_product\Entity\ProductVariation;
+use Drupal\digital_store_product\Entity\ProductAttributeWebFlow;
+use Drupal\digital_store_product\Entity\ProductAttributeHeaderSummary;
+
+define('DIGITAL_STORE_PRODUCT_BUNDLE', 'product');
+define('DIGITAL_STORE_PRODUCT_VARIATION_BUNDLE', 'product_variation');
+define('DIGITAL_STORE_PRODUCT_ATTRIBUTE_WEB_FLOW_BUNDLE', 'attribute_web_flow');
+define('DIGITAL_STORE_PRODUCT_ATTRIBUTE_HEADER_SUMMARY_BUNDLE', 'attribute_header_summary');
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ */
+function digital_store_product_entity_bundle_field_info(EntityTypeInterface $entity_type, $bundle) {
+  if (($entity_type->id() == 'node')) {
+    switch ($bundle) {
+      case Product::getBundle():
+        return Product::baseFieldDefinitions();
+        break;
+
+      case ProductVariation::getBundle():
+        return ProductVariation::baseFieldDefinitions();
+        break;
+
+      case ProductAttributeWebFlow::getBundle():
+        return ProductAttributeWebFlow::baseFieldDefinitions();
+        break;
+
+      case ProductAttributeHeaderSummary::getBundle():
+        return ProductAttributeHeaderSummary::baseFieldDefinitions();
+        break;
+    }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_entity_bundle_create().
+ *
+ *  Act on entity_bundle_create(), This hook is invoked after the operation
+ *  has been performed.
+ *
+ * @param string $entity_type_id
+ *   The type of $entity; e.g. 'node' or 'user'.
+ * @param string $bundle
+ *   The name of the bundle.
+ */
+function digital_store_product_entity_bundle_create($entity_type_id, $bundle) {
+  if (empty($entity_type_id) || ($entity_type_id != 'node')) {
+    return NULL;
+  }
+  switch ($bundle) {
+    case Product::getBundle():
+      return Product::createFields();
+      break;
+
+    case ProductVariation::getBundle():
+      return ProductVariation::createFields();
+      break;
+
+    case ProductAttributeWebFlow::getBundle():
+      return ProductAttributeWebFlow::createFields();
+      break;
+
+    case ProductAttributeHeaderSummary::getBundle():
+      return ProductAttributeHeaderSummary::createFields();
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function digital_store_product_node_update(EntityInterface $entity = NULL) {
+  /* @var \Drupal\node\NodeInterface $entity */
+  if (!$entity) {
+    return;
+  }
+  $bundle = $entity->bundle();
+  // Maintain some product fields on post save.
+  if ($bundle == Product::getBundle()) {
+    $product = new Product($entity);
+    $product->postSave();
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function digital_store_product_node_delete(EntityInterface $entity = NULL) {
+  /* @var \Drupal\node\NodeInterface $entity */
+  if (!$entity) {
+    return;
+  }
+  $bundle = $entity->bundle();
+  // Delete the product variations of a deleted product.
+  if ($bundle == Product::getBundle()) {
+    $product = new Product($entity);
+    $product->postDelete();
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function digital_store_product_form_node_type_form_alter(&$form, FormStateInterface $form_state) {
+  // Load the current node type configuration entity.
+  /* @var $node_type Drupal\node\Entity\NodeType */
+  $node_type = $form_state->getFormObject()->getEntity();
+  if (!$node_type) {
+    return NULL;
+  }
+  // Add Product Attributes details.
+  $form['product_attribute'] = [
+    '#type' => 'details',
+    '#title' => t('Product Attribute'),
+    '#group' => 'additional_settings',
+  ];
+  // Add Field: Is Product Attribute?.
+  $form['product_attribute']['is_product_attribute'] = [
+    '#type' => 'checkbox',
+    '#title' => t('This Bundle represents a product attribute?'),
+    '#description' => t('Check this box if you would like to use this node-type as a product attribute.'),
+    '#default_value' => $node_type->getThirdPartySetting('digital_store_product', 'is_product_attribute', 0),
+  ];
+  // Add an extra callback function to the #entity_builders group that will be
+  // triggered when the entity is saved and that has the purpose of mapping
+  // values to an entity.
+  $form['#entity_builders'][] = 'digital_store_product_form_node_type_form_builder';
+}
+
+/**
+ * Entity form builder for the node type form to map some values to third party
+ * settings
+ */
+function digital_store_product_form_node_type_form_builder($entity_type, NodeTypeInterface $type, &$form, FormStateInterface $form_state) {
+  // Handle Changes on the field: Is Product Attribute?.
+  if ($form_state->getValue('is_product_attribute') === 1) {
+    $type->setThirdPartySetting('digital_store_product', 'is_product_attribute', 1);
+  }
+  else {
+    $type->unsetThirdPartySetting('digital_store_product', 'is_product_attribute');
+  }
+}

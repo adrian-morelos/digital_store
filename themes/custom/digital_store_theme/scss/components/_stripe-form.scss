@@ -1,0 +1,29 @@
+// stylelint-disable declaration-no-important
+
+// Stripe Form.
+//
+.stripe-form {
+  .credit-card {
+    label {
+      display: block;
+      margin-bottom: .2rem;
+      width: 100%;
+      font-size: .9rem;
+    }
+
+    .form-text {
+      display: block;
+      width: 100%;
+      height: calc(2.25rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1.3px solid #cfd7df;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+  }
+}

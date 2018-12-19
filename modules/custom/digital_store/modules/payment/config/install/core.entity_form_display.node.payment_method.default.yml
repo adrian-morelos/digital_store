@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.payment_method
+  module:
+    - address
+id: node.payment_method.default
+targetEntityType: node
+bundle: payment_method
+mode: default
+content:
+  payment_method_is_default:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  payment_method_owner:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  payment_method_gateway:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      placeholder: ''
+      size: 60
+    region: content
+    third_party_settings: {  }
+  payment_method_gateway_mode:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

@@ -1,0 +1,7 @@
+digital_store_order.orders:
+  path: '/admin/digital_store/orders'
+  defaults:
+    _controller: '\Drupal\digital_store_order\Controller\OrdersController::orderListingPage'
+    _title: 'Orders'
+  requirements:
+    _permission: 'administer orders'

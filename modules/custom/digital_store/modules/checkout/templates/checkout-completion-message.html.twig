@@ -1,0 +1,183 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the completion message.
+ *
+ * Available variables:
+ * - order: The order entity.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="c">
+    <div class="checkout-complete r">
+        <div class="col">
+            <div class="b">
+                <div class="c-f-s">
+                    <h3 class="t">Payment Completed</h3>
+                    <div class="r">
+                        <div class="col-md-6 col-sm-6">
+                            <h1>Thanks for your order!</h1>
+                            {{ 'Your order number is @number.'|t({'@number': order.getOrderNumber}) }} <br>
+                            {{ 'You can view your order on your account page when logged in.'|t }} <br>
+                            <p class="note">We just sent your receipt to your email address!.</p>
+                            <div class="order-customer-details">
+                                <h3>Order Details</h3>
+                                <table class="shop_table order_details">
+                                    <tbody>
+                                    <tr>
+                                        <th>Order Number</th>
+                                        <td><strong>#5102889731</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Date:</th>
+                                        <td>November 14, 2018</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Product:</th>
+                                        <td>
+                                            <div class="single-product">
+                                                <a href="https://woocommerce.com/products/stripe/">Stripe</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th scope="r">Subtotal:</th>
+                                        <td><span class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">$</span>0.00</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="r">Total:</th>
+                                        <td><span class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">$</span>0.00</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="r">PDF Invoice:</th>
+                                        <td>
+                                            <a class="wccom-tracks__trackable"
+                                               data-tracks="order_details_invoice_download"
+                                               href="/checkout/order-received/3591605/?key=wc_order_5beb853f8a00e&amp;pdfinvoice=true&amp;order=3591605">
+                                                <i class="fa fa-download"></i> Download
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                                <a href="/checkout/order-received/3591605/?key=wc_order_5beb853f8a00e&amp;pdfinvoice=true&amp;order=3591605"
+                                   class="pdf-link" title="Download PDF Invoice"><i class="fa fa-file-pdf-o"></i>
+                                    <span>Download PDF Invoice</span></a>
+                                <h3>Customer Details</h3>
+                                <table class="shop_table shop_table_responsive customer_details">
+                                    <tbody>
+                                    <tr>
+                                        <th>Email:</th>
+                                        <td>ing.adrianmorelos@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Billing Address:</th>
+                                        <td>
+                                            <address>
+                                                Adrian Andres Morelos Henriquez<br>THINKcreativegroup<br>Torices Cll
+                                                Santander #1660<br>Cartagena-Bolivar<br>Colombia<br>130002<br>Colombia
+                                            </address>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="download-files">
+                                <div>
+                                    <h3>WooHoo! Download your files.</h3>
+                                    <table id="downloads_table">
+                                        <tbody>
+                                        <tr class="order_item">
+                                            <td colspan="3">
+                                                <div class="product-name">
+                                                    <a href="https://woocommerce.com/products/stripe/">Stripe</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="item-links">
+                                            <td colspan="1">
+                                                <a id="normal-download"
+                                                   href="https://woocommerce.com/?download_file=18627&amp;order=wc_order_5beb853f8a00e&amp;uid=805d739734835a3c51c3e76ccb884a513756d809b0313ecaca1ae20dbd270d71&amp;key=50bb7a985c691bb943a9da4d2c8b5efd"
+                                                   class="download-link wccom-component__button wccom-tracks__trackable btn btn-success"
+                                                   data-tracks="order_details_download" data-tracks-extensions="Stripe"
+                                                   title="Download woocommerce-gateway-stripe.zip"
+                                                   data-product-name="Stripe" short="">
+                                                    <i class="fa fa-download"></i>
+                                                    Download
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="http://docs.woocommerce.com/document/stripe"
+                                                   class="docs-link wccom-tracks__trackable"
+                                                   data-tracks="order_details_docs"
+                                                   data-tracks-extensions="Stripe">
+                                                    <i class="fa fa-file-text-o"></i> Docs
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="download-links download-18627" style="display: none;">
+                                            <td colspan="3">
+                                                <div class="single-download">
+                                                    <a id="normal-download" class="wccom-tracks__trackable"
+                                                       data-tracks="order_details_download"
+                                                       data-tracks-extensions="Stripe"
+                                                       href="https://woocommerce.com/?download_file=18627&amp;order=wc_order_5beb853f8a00e&amp;uid=805d739734835a3c51c3e76ccb884a513756d809b0313ecaca1ae20dbd270d71&amp;key=50bb7a985c691bb943a9da4d2c8b5efd"
+                                                       data-product-name="Stripe">
+                                                        <i class="fa fa-arrow-circle-right"></i>
+                                                        Download : woocommerce-gateway-stripe.zip </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="wccom-order-details__upsell-container">
+                                    <p>
+                                        Continue shopping and explore more popular extensions from the creators of
+                                        WPUseful:
+                                    </p>
+                                    <p class="wccom-order-details__upsell-container-extension">
+                                        <a class="wccom-tracks__trackable" data-tracks="order_details_continue_shopping"
+                                           data-tracks-extension="WooCommerce Subscriptions"
+                                           href="/products/woocommerce-subscriptions/">
+                                            WooCommerce Subscriptions
+                                        </a>
+                                    </p>
+                                    <p class="wccom-order-details__upsell-container-extension">
+                                        <a class="wccom-tracks__trackable" data-tracks="order_details_continue_shopping"
+                                           data-tracks-extension="WooCommerce Bookings"
+                                           href="/products/woocommerce-bookings/">
+                                            WooCommerce Bookings
+                                        </a>
+                                    </p>
+                                    <p class="wccom-order-details__upsell-container-extension">
+                                        <a class="wccom-tracks__trackable" data-tracks="order_details_continue_shopping"
+                                           data-tracks-extension="Product AddOns" href="/products/product-add-ons/">
+                                            Product Add-Ons
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a class="wccom-tracks__trackable"
+                                           data-tracks="order_details_continue_shopping_all"
+                                           href="/product-category/woocommerce-extensions/">
+                                            View all of our extensions <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

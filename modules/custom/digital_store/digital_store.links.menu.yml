@@ -1,0 +1,20 @@
+digital_store.admin_digital_store:
+  title: 'Digital Store'
+  route_name: 'digital_store.admin_digital_store'
+  parent: 'system.admin'
+  description: 'Administer and configure your Digital Store store.'
+  weight: -9
+
+digital_store.configuration:
+  title: 'Configuration'
+  route_name: 'digital_store.configuration'
+  parent: 'digital_store.admin_digital_store'
+  description: 'Configure your store settings and structure.'
+  weight: 10
+
+entity.currency.collection:
+  title: Currencies
+  route_name: entity.currency.collection
+  parent: 'digital_store.configuration'
+  description: 'Manage your currencies.'
+  weight: -20

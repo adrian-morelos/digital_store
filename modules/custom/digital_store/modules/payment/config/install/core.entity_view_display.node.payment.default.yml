@@ -1,0 +1,99 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.payment
+  module:
+    - digital_store
+    - options
+    - user
+id: node.payment.default
+targetEntityType: node
+bundle: payment
+mode: default
+content:
+  payment_amount:
+    type: price_default
+    weight: 5
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  payment_authorized:
+    type: timestamp
+    weight: 7
+    region: content
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  payment_completed:
+    type: timestamp
+    weight: 9
+    region: content
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  payment_expires:
+    type: timestamp
+    weight: 8
+    region: content
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  payment_gateway:
+    type: entity_reference_label
+    weight: 0
+    settings:
+      link: true
+    region: content
+    label: above
+    third_party_settings: {  }
+  payment_gateway_mode:
+    label: above
+    type: list_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  payment_refunded_amount:
+    type: price_default
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  payment_remote_id:
+    type: string
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  payment_remote_state:
+    type: string
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  payment_state:
+    label: hidden
+    type: list_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,6 @@
+name: Digital Store
+type: module
+description: 'Defines common functionality for all Digital Store modules.'
+package: Digital Store
+core: 8.x
+configure: digital_store.admin_digital_store

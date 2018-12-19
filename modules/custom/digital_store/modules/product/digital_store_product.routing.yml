@@ -1,0 +1,7 @@
+digital_store_product.configuration.products:
+  path: '/admin/digital_store/config/products'
+  defaults:
+    _form: '\Drupal\digital_store_product\Form\ProductSettingsForm'
+    _title: "Product settings"
+  requirements:
+    _permission: 'access digital_store administration pages'

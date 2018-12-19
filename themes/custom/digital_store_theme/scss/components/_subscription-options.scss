@@ -1,0 +1,134 @@
+// stylelint-disable declaration-no-important
+
+// Subscription options.
+//
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.s-o {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+  box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+  max-width: 500px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 20px 30px 20px 30px;
+  input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    border-radius: 50%;
+    z-index: 99;
+    &:hover {
+      background: #9faab7;
+    }
+    &:checked {
+      background: #71b02f;
+    }
+    &:checked::before {
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      content: '✔';
+      display: inline-block;
+      font-size: 26.66667px;
+      text-align: center;
+      line-height: 40px;
+    }
+    &:checked::after {
+      -webkit-animation: click-wave 0.65s;
+      -moz-animation: click-wave 0.65s;
+      animation: click-wave 0.65s;
+      background: #71b02f;
+      content: '';
+      display: block;
+      position: relative;
+      z-index: 100;
+    }
+    &::after {
+      border-radius: 50%;
+    }
+  }
+  label {
+    vertical-align: top;
+    margin-top: .5rem;
+    margin-bottom: 0;
+    div {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      font-weight: 300;
+      color: #525f7f;
+      font-size: 17px;
+      line-height: 24px;
+      font-family: sans-serif;
+      &.price {
+        color: #32325d;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: $font-family-monospace;
+      }
+    }
+  }
+  h4 {
+    font-weight: 200;
+    color: #32325d;
+    font-size: 26px;
+    line-height: 42px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: $font-family-monospace;
+  }
+  p {
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #525f7f;
+  }
+  .form-item-price-options {
+    margin-bottom: 0.2rem;
+  }
+  .form-actions {
+    clear: both;
+    margin-top: 1rem;
+    text-align: right;
+    input.buy_now {
+      margin-right: 1rem;
+    }
+    input.add_to_cart {
+      color: #6772e5;
+    }
+  }
+}

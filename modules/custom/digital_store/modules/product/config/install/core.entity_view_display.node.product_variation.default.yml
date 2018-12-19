@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_variation.price
+    - field.field.node.product_variation.product_id
+    - field.field.node.product_variation.sku
+    - field.field.node.product_variation.variation_bundle
+    - field.field.node.product_variation.variation_label
+    - node.type.product_variation
+  module:
+    - digital_store
+    - user
+id: node.product_variation.default
+targetEntityType: node
+bundle: product_variation
+mode: default
+content:
+  price:
+    label: above
+    type: price_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  variation_label:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true
+  product_id: true
+  sku: true
+  variation_bundle: true

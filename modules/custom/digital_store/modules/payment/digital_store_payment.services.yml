@@ -1,0 +1,8 @@
+services:
+  digital_store_payment.stripe_client:
+    class: Drupal\digital_store_payment\StripeClient
+    arguments: ['@config.factory']
+
+  digital_store_payment.payment_process:
+    class: Drupal\digital_store_payment\PaymentProcess
+    arguments: ['@digital_store_payment.stripe_client', '@entity_type.manager', '@messenger']

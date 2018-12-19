@@ -1,0 +1,4 @@
+services:
+  digital_store_order.order_item_matcher:
+    class: Drupal\digital_store_order\OrderItemMatcher
+    arguments: []

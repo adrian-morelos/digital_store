@@ -1,0 +1,80 @@
+// stylelint-disable declaration-no-important
+
+// Focus Box.
+//
+
+.b {
+  width: 90%;
+  margin: 30px auto;
+  overflow: inherit;
+  padding: 1em 2em;
+  padding-right: 24px;
+  height: auto;
+  box-shadow: 0 1px 3px 0 rgba(50, 50, 93, .15);
+  border-radius: 6px;
+  border: 1px solid #e8e8fb;
+  background-color: #f8fbfd;
+
+  // Checkout Flow Step.
+  .c-f-s {
+    margin: 1rem auto 1.2rem auto;
+  }
+
+  h3.t {
+    font-size: 1.063rem;
+    line-height: 26px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .025em;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    color: #fff;
+    padding: .188rem 1.125rem;
+    border-radius: 3.125rem;
+    top: 31px;
+    background: #2babc7;
+  }
+
+  h5.s {
+    color: #32325d;
+    border-bottom: 1px solid #e8e8fb;
+    padding-bottom: .5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .o-i-l {
+    font-size: .9em;
+    margin: 0;
+
+    dl {
+      margin-bottom: 0;
+
+      dd {
+        margin-bottom: 0;
+      }
+
+      .v-s-t {
+        display: inline-block;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Fix messages width on special sections.
+.section-cart, .section-checkout {
+  .messages {
+    width: 90%;
+    margin: 0 auto 1rem auto;
+    overflow: inherit;
+    padding: 1em 2em;
+  }
+}

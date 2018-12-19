@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - digital_store
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Order
+type: order
+description: 'Defines the order entity.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false
+third_party_settings: {  }

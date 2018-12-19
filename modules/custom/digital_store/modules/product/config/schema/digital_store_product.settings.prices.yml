@@ -1,0 +1,14 @@
+# Schema for the Prices Settings.
+digital_store_product.settings.prices:
+  type: config_object
+  label: 'Prices Settings'
+  mapping:
+    title:
+      type: string
+      label: 'Price Options title.'
+    description:
+      type: string
+      label: 'Price Options description.'
+    quick_buy:
+      type: boolean
+      label: 'Do you want to activate Quick Buy?'

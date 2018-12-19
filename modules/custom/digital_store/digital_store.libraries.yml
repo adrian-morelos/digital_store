@@ -1,0 +1,11 @@
+toolbar:
+  version: VERSION
+  css:
+    theme:
+      css/digital_store.icons.css: {}
+
+price_admin:
+  version: VERSION
+  css:
+    theme:
+      css/price.admin.css: {}

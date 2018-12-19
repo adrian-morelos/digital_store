@@ -1,0 +1,63 @@
+// stylelint-disable declaration-no-important
+
+// Payment Information Step.
+//
+.p-i-s {
+  .b-i {
+    .b-a {
+      padding: 0.15em 1.14286em 0 1.14286em;
+      border-radius: 4px;
+      background: #fff;
+      background-clip: padding-box;
+      border: 1px #d9d9d9 solid;
+    }
+
+    .item {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      padding: 10px 0;
+      align-items: initial;
+      justify-content: initial;
+      color: #8898aa;
+      font-weight: 400;
+      margin-bottom: 0;
+      border-bottom: 1px solid #f0f5fa;
+
+      label {
+        min-width: 74px;
+        padding: 0 15px 0 0;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.4em;
+        color: #525f7f;
+        margin: 0;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .i-p {
+        flex: 1;
+        padding: 0 15px 0 2px;
+        font-weight: 400;
+        color: #000;
+        outline: none;
+        cursor: text;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.4em;
+        min-width: 84px;
+      }
+
+      .l-a {
+        font-size: 13px;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

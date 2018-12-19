@@ -1,0 +1,7 @@
+digital_store_payment.configuration.stripe:
+  path: '/admin/digital_store/config/stripe'
+  defaults:
+    _form: '\Drupal\digital_store_payment\Form\StripeSettingsForm'
+    _title: "Stripe Connection settings"
+  requirements:
+    _permission: 'access digital_store administration pages'

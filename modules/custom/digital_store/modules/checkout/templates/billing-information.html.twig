@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the billing-information message.
+ *
+ * Available variables:
+ * - address: The address array.
+ * - name: The person name.
+ *
+ * @ingroup themeable
+ */
+#}
+<div itemscope itemtype="http://schema.org/Person" class="b-i col-md-6 col-sm-12">
+    <h5 class="s">Billing Information</h5>
+    <div itemscope itemtype="http://schema.org/Person" class="b-a">
+        <div class="item">
+            <label>Name</label>
+            <div itemprop="name" class="i-p">{{ name }}</div>
+            {{ action_link }}
+        </div>
+        <div class="item">
+            <label>Contact</label>
+            <div itemprop="email" class="i-p">{{ email }}</div>
+            <div class="action">{{ action_link }}</div>
+        </div>
+        <div class="item">
+            <label>Company</label>
+            <div class="i-p" itemscope itemtype="http://schema.org/Organization">
+                <div itemprop="name">{{ organization }}</div>
+            </div>
+            {{ action_link }}
+        </div>
+        <div class="item">
+            <label>Address</label>
+            <div itemprop="address" class="address i-p" itemscope itemtype="http://schema.org/PostalAddress">
+                <p><span itemprop="streetAddress">{{ address_line1 }} {{ address_line2 }}</span>. <span
+                            itemprop="addressLocality">{{ locality }}</span>, <span
+                            itemprop="addressRegion">{{ administrative_area }}</span>
+                    <span itemprop="postalCode">{{ postal_code }}</span> <span
+                            itemprop="addressCountry">{{ country_code }}</span>.</p>
+            </div>
+            {{ action_link }}
+        </div>
+    </div>
+</div>

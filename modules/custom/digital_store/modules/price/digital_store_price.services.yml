@@ -1,0 +1,10 @@
+services:
+  digital_store_price.chain_price_resolver:
+    class: Drupal\digital_store_price\Resolver\ChainPriceResolver
+    tags:
+      - { name: service_collector, call: addResolver, tag: digital_store_price.price_resolver }
+
+  digital_store_price.default_price_resolver:
+    class: Drupal\digital_store_price\Resolver\DefaultPriceResolver
+    tags:
+      - { name: digital_store_price.price_resolver, priority: -100 }

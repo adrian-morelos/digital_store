@@ -1,0 +1,20 @@
+/*
+ * Digital Store APP v1.0.0 (http://wpuseful.com/)
+ * Copyright 2011-2018 WPUseful, Inc.
+ *
+ * Shop Manager styles.
+ */
+@import "../functions";
+@import "../variables";
+@import "../mixins";
+@import "../components/local-tasks";
+
+// Visually Hidden.
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}

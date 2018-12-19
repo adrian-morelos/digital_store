@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.attribute_web_flow
+id: node.attribute_web_flow
+target_entity_type_id: node
+target_bundle: attribute_web_flow
+default_langcode: site_default
+language_alterable: false

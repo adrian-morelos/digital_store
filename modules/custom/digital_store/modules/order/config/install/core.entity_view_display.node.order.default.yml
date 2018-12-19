@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.order
+  module:
+    - address
+    - digital_store
+    - options
+    - user
+id: node.order.default
+targetEntityType: node
+bundle: order
+mode: default
+content:
+  billing_details:
+    type: address_default
+    weight: 7
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  checkout_flow_step:
+    label: above
+    type: list_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  completed:
+    label: above
+    type: timestamp
+    weight: 5
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  customer:
+    label: above
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  ip_address:
+    label: above
+    type: string
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  mail:
+    label: above
+    type: basic_string
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  order_items:
+    type: order_item_table
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  order_total_price:
+    label: hidden
+    type: price_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  placed:
+    label: above
+    type: timestamp
+    weight: 4
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  state:
+    label: above
+    type: list_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  total_paid:
+    type: price_default
+    weight: 10
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

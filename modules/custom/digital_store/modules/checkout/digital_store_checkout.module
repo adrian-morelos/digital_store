@@ -1,0 +1,117 @@
+<?php
+
+/**
+ * @file
+ * Provides Digital Store checkout flow.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\digital_store_order\Entity\Order;
+use Drupal\digital_store_checkout\CheckoutFlow;
+use Drupal\digital_store_checkout\CheckoutFlowStepsInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function digital_store_checkout_theme() {
+  return [
+    'checkout_completion_message' => [
+      'variables' => [
+        'order' => NULL,
+        'attributes' => [],
+      ],
+      'template' => 'checkout-completion-message',
+    ],
+    'billing_information' => [
+      'variables' => [
+        'address' => NULL,
+        'name' => NULL,
+        'organization' => NULL,
+        'email' => NULL,
+        'country_code' => NULL,
+        'address_line1' => NULL,
+        'address_line2' => NULL,
+        'locality' => NULL,
+        'administrative_area' => NULL,
+        'postal_code' => NULL,
+        'attributes' => [],
+        'action_link' => NULL,
+      ],
+      'template' => 'billing-information',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function digital_store_checkout_form_alter(array &$form = [], FormStateInterface $form_state = NULL, $form_id = NULL) {
+  if ($form_id == 'cart-form') {
+    // Add the billing details step.
+    $form['billing_details_step'] = [
+      '#type' => 'billing_details_step',
+      '#required' => FALSE,
+    ];
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function digital_store_checkout_presave(EntityInterface $entity = NULL) {
+  /* @var \Drupal\node\NodeInterface $entity */
+  if (!$entity) {
+    return;
+  }
+  if ($entity->bundle() != Order::getBundle()) {
+    return;
+  }
+  if (!$entity->isNew()) {
+    return;
+  }
+  // Maintain the field 'Checkout Flow Step' on pre save.
+  $entity->set('checkout_flow_step', CheckoutFlowStepsInterface::SHOPPING_CART);
+}
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ *
+ * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
+ *   The entity type.
+ * @param string $bundle
+ *   The entity bundle.
+ */
+function digital_store_checkout_entity_bundle_field_info(EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() != 'node') {
+    return NULL;
+  }
+  if ($bundle != Order::getBundle()) {
+    return NULL;
+  }
+  $fields = [];
+  // Field: Checkout Flow Step.
+  $fields['checkout_flow_step'] = BaseFieldDefinition::create('list_string')
+    ->setLabel(t('Checkout Flow Step'))
+    ->setDescription(t('Checkout Flow Step'))
+    ->setSetting('allowed_values', CheckoutFlow::getStepLabels())
+    ->setReadOnly(TRUE)
+    ->setRequired(TRUE)
+    ->setDefaultValue('shopping.cart')
+    ->setDisplayOptions('view', [
+      'label' => 'above',
+      'type' => 'list_default',
+      'weight' => 0,
+    ])
+    ->setDisplayOptions('form', [
+      'type' => 'options_select',
+      'weight' => 3,
+      'settings' => [
+      ],
+    ])
+    ->setDisplayConfigurable('form', FALSE)
+    ->setDisplayConfigurable('view', TRUE);
+  return $fields;
+}

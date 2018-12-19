@@ -1,0 +1,6 @@
+digital_store_payment.configuration.stripe:
+  title: 'Stripe Settings'
+  route_name: 'digital_store_payment.configuration.stripe'
+  parent: 'digital_store.configuration'
+  description: 'Stripe Connection settings.'
+  weight: 11

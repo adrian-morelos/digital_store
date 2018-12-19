@@ -1,0 +1,236 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+header.g {
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  .r {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .f-p-h {
+    border-top: 1px solid #eaebec;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid #eaebec;
+    padding-bottom: 0.5rem;
+  }
+  .b-b {
+    -webkit-box-flex: 0;
+    flex-basis: 15%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-align: center;
+    margin: 4px 0 4px 0;
+    .logo {
+      margin-right: 0.2rem;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    img {
+      max-width: 2em;
+    }
+    a {
+      color: $gray-800;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  nav.b-b-m {
+    ul {
+      display: block;
+      list-style: none;
+      margin-bottom: 0;
+      padding: 0 30px;
+      li {
+        position: relative;
+        a {
+          color: $gray-600;
+          font-size: 1em;
+          font-weight: 300;
+          line-height: 1.7em;
+          text-decoration: none;
+          white-space: nowrap;
+          user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          font-family: $font-family-monospace;
+          width: 100%;
+          display: block;
+          text-align: left;
+          border-bottom: 1px solid #eaebec;
+          padding: 0.5rem 0;
+          &:hover {
+            color: $blue;
+          }
+        }
+        &:last-child {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+  nav.b-b-u {
+    ul {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0;
+      justify-content: center;
+      flex-direction: column;
+      a {
+        background-color: transparent;
+        border: 2px solid #898e92;
+        color: #898e92;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 22px;
+        display: block;
+        padding: 4px 22px;
+        text-decoration: none;
+        border-radius: 20px;
+        margin: 0 0;
+        margin-top: 0.8rem;
+        text-align: center;
+      }
+    }
+  }
+  // Block Search.
+  .b-b-s {
+    form {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 8px auto 2px auto;
+      .form-item {
+        width: 80%;
+        max-width: 350px;
+        [type=search] {
+          display: block;
+          width: 100%;
+          height: $input-height;
+          padding: $input-padding-y $input-padding-x;
+          font-size: $font-size-base;
+          line-height: $input-line-height;
+          color: $input-color;
+          background-color: $input-bg;
+          background-clip: padding-box;
+          border: $input-border-width solid $input-border-color;
+          border-right: 0;
+          border-radius: $input-border-radius 0 0 $input-border-radius;
+          @include box-shadow($input-box-shadow);
+          @include transition($input-transition);
+
+          // Unstyle the caret on `<select>`s in IE10+.
+          &::-ms-expand {
+            background-color: transparent;
+            border: 0;
+          }
+
+          // Customize the `:focus` state to imitate native WebKit styles.
+          @include form-control-focus();
+
+          // Placeholder
+          &::placeholder {
+            color: $input-placeholder-color;
+            // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+            opacity: 1;
+          }
+
+          // Disabled and read-only inputs
+          //
+          // HTML5 says that controls under a fieldset > legend:first-child won't be
+          // disabled if the fieldset is disabled. Due to implementation difficulty, we
+          // don't honor that edge case; we style them as disabled anyway.
+          &:disabled,
+          &[readonly] {
+            background-color: $input-disabled-bg;
+            // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+            opacity: 1;
+          }
+        }
+      }
+      [type=submit] {
+        background-color: #3bc8e7;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1.3px solid transparent;
+        padding: .375rem 1.1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        border-radius: 0 .25rem .25rem 0;
+      }
+    }
+  }
+}
+// Media Query.
+@media (min-width: $breakpoint-md) {
+  header.g {
+    margin-bottom: 1rem;
+    .b-b {
+      text-align: left;
+      margin: 4px 0 12px 0;
+    }
+    .r {
+      flex-direction: inherit;
+    }
+    nav.b-b-m {
+      ul {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+        display: flex;
+        padding: 0;
+        li {
+          a {
+            line-height: 2em;
+            margin: 2.125em 2.4em;
+            text-align: center;
+            width: auto;
+            border: none;
+            padding: inherit;
+            display: initial;
+          }
+        }
+      }
+    }
+    nav.b-b-u {
+      ul {
+        flex-direction: inherit;
+        justify-content: flex-end;
+        li {
+          a {
+            margin-left: .5rem;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .b-b-s {
+      form {
+        margin: auto;
+      }
+    }
+  }
+}

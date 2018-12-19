@@ -1,0 +1,8 @@
+name: Digital Store Payment
+type: module
+description: 'Provides payment functionality.'
+package: Digital Store
+core: 8.x
+dependencies:
+  - digital_store:digital_store
+  - digital_store:digital_store_order

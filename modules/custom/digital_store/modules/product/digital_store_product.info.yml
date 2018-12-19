@@ -1,0 +1,9 @@
+name: Digital Store Product
+type: module
+description: 'Defines the Product entity and associated features.'
+package: Digital Store
+core: 8.x
+dependencies:
+  - digital_store:digital_store
+  - drupal:path
+  - drupal:text

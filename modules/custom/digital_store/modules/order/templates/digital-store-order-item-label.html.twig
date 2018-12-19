@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the digital-store-order-item label.
+ *
+ * Available variables:
+ * - product_url: The product url.
+ * - product_label: The product name.
+ * - variation_label: The variation name.
+ * - variation_type: The variation type.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="o-i-l">
+    <a href="{{ product_url }}">{{ product_label }}</a>
+    <dl class="variation">
+        <dt class="v-s-t">{{ variation_label }}</dt>
+        <dd class="v-s-t"><p>{{ variation_type }}</p>
+        </dd>
+    </dl>
+</div>

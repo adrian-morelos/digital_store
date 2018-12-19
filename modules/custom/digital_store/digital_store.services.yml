@@ -1,0 +1,12 @@
+services:
+  digital_store.entity_helper:
+    class: Drupal\digital_store\DigitalStoreEntityHelper
+    arguments: []
+
+  digital_store.asset_libraries:
+    class: Drupal\digital_store\DigitalStoreAssetLibraries
+    arguments: []
+
+  digital_store.rounder:
+    class: Drupal\digital_store\Rounder
+    arguments: ['@entity_type.manager']

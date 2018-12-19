@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store_product
+    - menu_ui
+third_party_settings:
+  digital_store_product:
+    is_product_attribute: 1
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Attribute - Header Summary'
+type: attribute_header_summary
+description: 'Product Attribute Header Summary.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

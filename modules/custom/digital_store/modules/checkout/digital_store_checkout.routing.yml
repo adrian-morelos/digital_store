@@ -1,0 +1,35 @@
+digital_store_checkout.checkout_page:
+  path: '/checkout'
+  defaults:
+    _controller: '\Drupal\digital_store_checkout\Controller\CheckoutController::checkoutRedirect'
+    _title: 'Checkout'
+  requirements:
+    _access: 'TRUE'
+
+digital_store_checkout.payment:
+  path: '/checkout/{order_id}/payment'
+  defaults:
+    #_controller: '\Drupal\digital_store_checkout\Controller\CheckoutController::checkoutPage'
+    _form: '\Drupal\digital_store_checkout\Form\CheckoutPaymentForm'
+    _title: 'Checkout - Payment.'
+    #step: 'payment'
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      order_id:
+        type: entity:node
+
+digital_store_checkout.order-received:
+  path: '/checkout/{order}/order-received'
+  defaults:
+    _controller: '\Drupal\digital_store_checkout\Controller\CheckoutController::checkoutPage'
+    _title: 'Checkout - Payment.'
+    step: 'order-received'
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      order:
+        type: entity:node
+

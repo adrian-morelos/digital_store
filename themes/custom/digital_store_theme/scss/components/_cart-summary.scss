@@ -1,0 +1,75 @@
+// stylelint-disable declaration-no-important
+
+// Cart summary.
+.c-s {
+  margin-bottom: 1.2rem;
+}
+
+// Cart Items.
+table.c-i {
+  width: 100%;
+  border-collapse: collapse;
+  background: $white;
+
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+
+    th {
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-bottom: 2px solid #93cae3;
+      color: #2e87b0;
+      font-size: .8em;
+      font-weight: 700;
+      padding: .8em;
+      text-transform: uppercase;
+    }
+  }
+
+  td {
+    border: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid transparent;
+    padding: .8em;
+  }
+
+}
+
+// Cart Totals.
+.c-t {
+  width: 100%;
+  border-collapse: collapse;
+  background: $white;
+
+  td {
+    border: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    padding: .62em .8em;
+    text-align: right;
+  }
+
+  .sub-total-label {
+    color: #333;
+    vertical-align: middle;
+    font-size: .8em;
+    font-weight: 700;
+  }
+
+  .sub-total-price {
+
+  }
+
+  .total-label {
+    color: #2e87b0;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+
+  .total-price {
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+}

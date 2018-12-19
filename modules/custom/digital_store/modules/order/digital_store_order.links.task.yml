@@ -1,0 +1,4 @@
+digital_store_order.orders:
+  route_name: digital_store_order.orders
+  base_route: digital_store_order.orders
+  title: 'Orders'

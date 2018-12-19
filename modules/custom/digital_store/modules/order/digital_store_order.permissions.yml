@@ -1,0 +1,3 @@
+'administer orders':
+  title: 'Administer Orders'
+  'restrict access': TRUE

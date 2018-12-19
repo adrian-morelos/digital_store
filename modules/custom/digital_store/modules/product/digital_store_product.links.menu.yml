@@ -1,0 +1,6 @@
+digital_store_product.configuration.products:
+  title: 'Products'
+  route_name: 'digital_store_product.configuration.products'
+  parent: 'digital_store.configuration'
+  description: 'Product settings.'
+  weight: 10

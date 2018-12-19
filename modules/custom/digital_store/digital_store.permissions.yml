@@ -1,0 +1,6 @@
+'access digital_store administration pages':
+  title: 'Use the digital_store administration pages'
+
+'administer currency':
+  title: 'Administer currencies'
+  'restrict access': TRUE

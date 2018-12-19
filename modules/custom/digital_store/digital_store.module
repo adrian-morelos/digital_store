@@ -1,0 +1,167 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * @file
+ * Defines common functionality for all the Digital Store modules.
+ */
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function digital_store_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'digital_store/toolbar';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function digital_store_theme() {
+  return [
+    'price_plain' => [
+      'variables' => [
+        'number' => 0,
+        'currency' => NULL,
+      ],
+      'template' => 'price-plain',
+    ],
+    'modal_box' => [
+      'variables' => [
+        'content' => '',
+        'attributes' => [],
+      ],
+      'template' => 'modal-box',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function digital_store_form_user_login_form_alter(array &$form = []) {
+  $form['#prefix'] = '<div class="c"><div class="r"><div class="col">';
+  $form['#suffix'] = '</div></div></div>';
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function digital_store_element_info_alter(array &$type) {
+  // Decrease the default size of textfields.
+  if (isset($type['address'])) {
+    $type['address']['#process'][] = 'digital_store_process_address_element';
+  }
+}
+
+/**
+ * Process Callback Function
+ *
+ * Callback to process the My Module link field.
+ */
+function digital_store_process_address_element(array &$element, FormStateInterface $form_state, array &$complete_form) {
+  // Country.
+  $element['country_code']['#prefix'] = '<div class="form-row"><div class="form-group col-md-3">';
+  $element['country_code']['#suffix'] = '</div></div>';
+  // Address Line 1.
+  $element['address_line1']['#attributes']['placeholder'] = t('House number and street name');
+  $element['address_line1']['#title'] = t('Address line 1');
+  $element['address_line1']['#prefix'] = '<div class="form-row"><div class="form-group col-md-6">';
+  $element['address_line1']['#suffix'] = '</div>';
+  $element['address_line1']['#required'] = FALSE;
+  // Address Line 2.
+  $element['address_line2']['#attributes']['placeholder'] = t('Apartment, suite, unit etc. (optional)');
+  $element['address_line2']['#title'] = t('Address line 2');
+  $element['address_line2']['#prefix'] = '<div class="form-group col-md-6">';
+  $element['address_line2']['#suffix'] = '</div></div>';
+  unset($element['address_line2']['#title_display']);
+  // City.
+  $element['locality']['#prefix'] = '<div class="form-row"><div class="form-group col-md-4">';
+  $element['locality']['#suffix'] = '</div>';
+  $element['locality']['#required'] = FALSE;
+  // State.
+  $element['administrative_area']['#prefix'] = '<div class="form-group col-md-4">';
+  $element['administrative_area']['#suffix'] = '</div>';
+  $element['administrative_area']['#required'] = FALSE;
+  // Zip Code.
+  $element['postal_code']['#prefix'] = '<div class="form-group col-md-4">';
+  $element['postal_code']['#suffix'] = '</div></div>';
+  $element['postal_code']['#required'] = FALSE;
+  return $element;
+}
+
+/**
+ * Implements install for a given Bundle.
+ *
+ * @param string $bundle
+ *   The node bundle.
+ */
+function digital_store_install_bundle($bundle = NULL) {
+  if (empty($bundle)) {
+    return NULL;
+  }
+  $state = Drupal::state();
+  // Do not allow the locked content type to be deleted.
+  $locked = $state->get('node.type.locked');
+  $locked[$bundle] = $bundle;
+  $state->set('node.type.locked', $locked);
+}
+
+/**
+ * Implements uninstall for a given Bundle.
+ *
+ * @param string $bundle
+ *   The node bundle.
+ * @param bool $remove_data
+ *   The flag: Remove Data.
+ */
+function digital_store_uninstall_bundle($bundle = NULL, $remove_data = FALSE) {
+  if (empty($bundle)) {
+    return NULL;
+  }
+  // Allow bundle to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  unset($locked[$bundle]);
+  Drupal::state()->set('node.type.locked', $locked);
+  if (!$remove_data) {
+    return NULL;
+  }
+  // Delete custom bundle nodes when uninstalling.
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', $bundle);
+  $ids = $query->execute();
+  if (!empty($ids)) {
+    $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $entities = $storage_handler->loadMultiple($ids);
+    $storage_handler->delete($entities);
+  }
+  // Delete the Custom Bundle.
+  $content_type = \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->load($bundle);
+  if ($content_type) {
+    $content_type->delete();
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function digital_store_link_alter(&$variables) {
+  $class = $variables['options']['attributes']['class'] ?? NULL;
+  if (empty($class)) {
+    return NULL;
+  }
+  if ($class == 'cta') {
+    $text = $variables['text'];
+    $variables['text'] = t('@text <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>', ['@text' => $text]);
+  }
+}
+
+/**
+ * Implements template_preprocess_page() for Page document templates.
+ */
+function digital_store_preprocess_page(&$variables) {
+  // Attach Stylesheets based on the page context.
+  \Drupal::service('digital_store.asset_libraries')->attachStylesheets($variables);
+}

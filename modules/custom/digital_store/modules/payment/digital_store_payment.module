@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Provides payment functionality.
+ */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\digital_store_payment\Entity\Payment;
+use Drupal\digital_store_payment\Entity\PaymentMethod;
+
+define('DIGITAL_STORE_PAYMENT_BUNDLE', 'payment');
+define('DIGITAL_STORE_PAYMENT_METHOD_BUNDLE', 'payment_method');
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function digital_store_payment_entity_base_field_info(EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'user') {
+    $fields = [];
+    $fields['remote_id'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Remote ID'))
+      ->setDescription(t('The remote payment ID.'))
+      ->setSetting('max_length', 255)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => 1,
+        'settings' => [
+          'size' => '60',
+          'placeholder' => '',
+        ],
+      ]);
+    return $fields;
+  }
+}
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ */
+function digital_store_payment_entity_bundle_field_info(EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  if (($entity_type->id() == 'node')) {
+    switch ($bundle) {
+      case Payment::getBundle():
+        return Payment::baseFieldDefinitions();
+        break;
+
+      case PaymentMethod::getBundle():
+        return PaymentMethod::baseFieldDefinitions();
+        break;
+
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_bundle_create().
+ */
+function digital_store_payment_entity_bundle_create($entity_type_id, $bundle) {
+  if (empty($entity_type_id) || ($entity_type_id != 'node')) {
+    return NULL;
+  }
+  switch ($bundle) {
+    case Payment::getBundle():
+      return Payment::createFields();
+      break;
+
+    case PaymentMethod::getBundle():
+      return PaymentMethod::createFields();
+      break;
+  }
+}

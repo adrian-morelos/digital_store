@@ -1,0 +1,4 @@
+digital_store_cart.carts:
+  route_name: digital_store_cart.carts
+  base_route: digital_store_order.orders
+  title: 'Carts'

@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_variation.price
+    - field.field.node.product_variation.product_id
+    - field.field.node.product_variation.sku
+    - field.field.node.product_variation.variation_bundle
+    - field.field.node.product_variation.variation_label
+    - node.type.product_variation
+  module:
+    - digital_store
+id: node.product_variation.default
+targetEntityType: node
+bundle: product_variation
+mode: default
+content:
+  price:
+    type: price_default
+    weight: 3
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  variation_bundle:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  variation_label:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  product_id: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

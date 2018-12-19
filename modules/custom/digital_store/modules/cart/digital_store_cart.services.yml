@@ -1,0 +1,25 @@
+services:
+  cache_context.cart:
+    class: Drupal\digital_store_cart\Cache\Context\CartCacheContext
+    arguments: ['@current_user', '@digital_store_cart.cart_provider']
+    tags:
+      - { name: cache.context }
+  digital_store_cart.cart_session:
+    class: Drupal\digital_store_cart\CartSession
+    arguments: ['@session']
+
+  digital_store_cart.order_item_matcher:
+    class: Drupal\digital_store_cart\OrderItemMatcher
+    arguments: []
+
+  digital_store_cart.cart_provider:
+    class: Drupal\digital_store_cart\CartProvider
+    arguments: ['@entity_type.manager', '@current_user', '@digital_store_cart.cart_session']
+
+  digital_store_cart.cart_manager:
+    class: Drupal\digital_store_cart\CartManager
+    arguments: ['@digital_store_order.order_item_matcher']
+
+  digital_store_cart.lazy_builders:
+    class: Drupal\digital_store_cart\ProductLazyBuilders
+    arguments: ['@entity_type.manager', '@form_builder', '@entity.repository']

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.attribute_header_summary.attribute_subheader
+    - field.field.node.attribute_header_summary.attribute_summary
+    - node.type.attribute_header_summary
+  module:
+    - text
+    - user
+id: node.attribute_header_summary.default
+targetEntityType: node
+bundle: attribute_header_summary
+mode: default
+content:
+  attribute_subheader:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  attribute_summary:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true
+  links: true

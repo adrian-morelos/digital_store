@@ -1,0 +1,15 @@
+digital_store_cart.cart_page:
+  path: '/cart'
+  defaults:
+    _form: '\Drupal\digital_store_cart\Form\CartForm'
+    _title: 'Shopping cart'
+  requirements:
+    _access: 'TRUE'
+
+digital_store_cart.carts:
+  path: '/admin/digital_store/carts'
+  defaults:
+    _controller: '\Drupal\digital_store_cart\Controller\CartsController::cartListingPage'
+    _title: 'Carts'
+  requirements:
+    _permission: 'administer carts'

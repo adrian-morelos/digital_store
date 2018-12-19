@@ -1,0 +1,5 @@
+entity.currency.add_form:
+  route_name: entity.currency.add_form
+  title: 'Add custom currency'
+  appears_on:
+    - entity.currency.collection

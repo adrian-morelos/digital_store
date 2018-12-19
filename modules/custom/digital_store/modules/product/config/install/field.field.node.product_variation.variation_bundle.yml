@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.variation_bundle
+    - node.type.product_variation
+id: node.product_variation.variation_bundle
+field_name: variation_bundle
+entity_type: node
+bundle: product_variation
+label: Bundle
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: null
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

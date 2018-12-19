@@ -1,0 +1,56 @@
+// stylelint-disable declaration-no-important
+
+// Features boxes.
+//
+.f-b {
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  padding-top: 1rem;
+  h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    color: #32325d;
+    margin: 0;
+    margin-top: 1rem
+  }
+  p {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 28px;
+    color: #525f7f;
+    font-family: sans-serif;
+  }
+  .i-t {
+    max-width: 910px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto 3rem auto;
+    p {
+      margin: 15px auto 0;
+      font-size: 24px;
+      line-height: 36px;
+      color: #424770;
+      font-weight: 300;
+    }
+  }
+  .f-b-i {
+    margin-top: 1rem;
+    h3 {
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 28px;
+      color: #32325d;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

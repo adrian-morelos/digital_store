@@ -1,0 +1,100 @@
+// stylelint-disable declaration-no-important
+
+// Web follow.
+//
+.w-f {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 30px 30px;
+  margin: 30px auto;
+  h3 {
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 17px;
+    line-height: 22px;
+    color: #32325d;
+    font-family: $font-family-monospace;
+  }
+  .field--type-image {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    .field__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin-bottom: 1.5rem;
+      .image {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        margin-bottom: 10px;
+        img {
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+          position: relative;
+          max-width: calc(100% - 40px);
+          border: 10px solid #f6f9fc;
+          width: auto;
+        }
+      }
+      p {
+        text-align: center;
+        font-size: 13px;
+        color: #6b7c93;
+        margin: 0 15px;
+        line-height: 1.5em;
+        font-family: sans-serif;
+      }
+    }
+  }
+}
+
+// Media Query.
+@media only screen and (min-width: 670px) {
+  .w-f .field--type-image {
+    flex-direction: inherit;
+  }
+  .w-f .field--type-image .field__item {
+    margin-bottom: 0;
+  }
+  .w-f .field--type-image .field__item .image:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #6b7c93;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+  .w-f .field--type-image .field__item:first-child .image:before {
+    left: 50%;
+  }
+  .w-f .field--type-image .field__item:last-child .image:before {
+    right: 50%;
+  }
+}

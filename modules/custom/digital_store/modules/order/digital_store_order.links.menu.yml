@@ -1,0 +1,5 @@
+digital_store_order.orders:
+  title: 'Orders'
+  route_name: 'digital_store_order.orders'
+  parent: 'digital_store.admin_digital_store'
+  description: 'Manage your orders.'

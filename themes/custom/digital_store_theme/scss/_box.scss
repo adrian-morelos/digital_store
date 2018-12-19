@@ -1,0 +1,23 @@
+//
+// Base styles
+//
+section.b {
+  background: #f6f6f6;
+  margin: auto;
+  z-index: 99;
+  &.s-c {
+  }
+  &.s-o {
+  }
+  .i {
+    width: 61%;
+    margin: 30px auto;
+    overflow: inherit;
+    padding: 1em 2em;
+    padding-right: 24px;
+    height: auto;
+    box-shadow: 0 1px 3px 0 rgba(50,50,93,.15);
+    border-radius: 6px;
+    background-color: #fbfbfb;
+  }
+}

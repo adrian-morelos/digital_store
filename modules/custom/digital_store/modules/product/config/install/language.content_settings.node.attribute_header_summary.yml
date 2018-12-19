@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.attribute_header_summary
+id: node.attribute_header_summary
+target_entity_type_id: node
+target_bundle: attribute_header_summary
+default_langcode: site_default
+language_alterable: false

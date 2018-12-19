@@ -1,0 +1,9 @@
+name: Digital Store Order
+type: module
+description: 'Defines the Order entity and associated features.'
+package: Digital Store
+core: 8.x
+dependencies:
+  - digital_store:digital_store
+  - drupal:node
+  - drupal:options

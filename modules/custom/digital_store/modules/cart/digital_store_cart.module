@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Implements the shopping cart system and add to cart features.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function digital_store_cart_theme($existing, $type, $theme, $path) {
+  return [
+    'digital_store_cart_block' => [
+      'variables' => [
+        'icon' => NULL,
+        'count' => NULL,
+        'count_text' => '',
+        'url' => NULL,
+        'links' => [],
+      ],
+    ],
+  ];
+}

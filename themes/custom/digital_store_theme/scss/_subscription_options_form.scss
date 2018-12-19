@@ -1,0 +1,14 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Subscription options form controls
+//
+form.subscription-options-form {
+  max-width: 360px;
+  .btn {
+    display: block;
+    clear: both;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

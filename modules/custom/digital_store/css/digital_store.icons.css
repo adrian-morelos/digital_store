@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Digital Store toolbar icon styling.
+ */
+
+/* Bar styling (first row), currently unused. */
+.toolbar-bar .toolbar-icon-digital-store-admin-digital-store:before {
+    background-image: url("../icons/bebebe/drupal-cart.svg");
+}
+.toolbar-bar .toolbar-icon-digital-store-admin-digital-store:active:before {
+    background-image: url("../icons/ffffff/drupal-cart.svg");
+}
+
+/* Tray styling (second row) */
+.toolbar-tray .toolbar-icon.toolbar-icon-digital-store-admin-digital-store:before {
+    background-image: url("../icons/787878/drupal-cart.svg");
+}
+.toolbar-tray .toolbar-icon.toolbar-icon-digital-store-admin-digital-store:active:before {
+    background-image: url("../icons/000000/drupal-cart.svg");
+}

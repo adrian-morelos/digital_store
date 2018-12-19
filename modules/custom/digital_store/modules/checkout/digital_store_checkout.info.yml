@@ -1,0 +1,9 @@
+name: 'Digital Store Checkout'
+type: module
+description: 'Provides Digital store checkout flow.'
+package: Commerce
+core: 8.x
+dependencies:
+  - digital_store:digital_store
+  - digital_store:digital_store_order
+  - digital_store:digital_store_cart

@@ -1,0 +1,7 @@
+digital_store_search.search:
+  path: '/search'
+  defaults:
+    _controller: '\Drupal\digital_store_search\Controller\SearchController::resultPage'
+    _title: 'Search'
+  requirements:
+    _access: 'TRUE'

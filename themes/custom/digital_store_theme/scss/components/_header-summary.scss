@@ -1,0 +1,49 @@
+// stylelint-disable declaration-no-important
+
+// Header summary.
+//
+.h-s {
+  text-align: left;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  h1 {
+    font-weight: 600;
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 32px;
+    line-height: 45px;
+    color: #32325d;
+  }
+  h2 {
+    font-weight: 200;
+    color: #3ecf8e;
+    font-size: 34px;
+    line-height: 42px;
+    margin-bottom: 1rem;
+    font-family: $font-family-monospace;
+  }
+  p {
+    color: #525f7f;
+    font-size: 23px;
+    line-height: 35px;
+    font-weight: 300;
+    font-family: sans-serif;
+  }
+  .cta-f {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    .f-i {
+      margin-right: 1rem;
+      a {
+        font-size: 1.1em;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.sku
+    - node.type.product_variation
+id: node.product_variation.sku
+field_name: sku
+entity_type: node
+bundle: product_variation
+label: SKU
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: string

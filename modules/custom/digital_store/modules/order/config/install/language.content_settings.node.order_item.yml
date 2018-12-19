@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.order_item
+id: node.order_item
+target_entity_type_id: node
+target_bundle: order_item
+default_langcode: site_default
+language_alterable: false

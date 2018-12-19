@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * @file
+ * Defines the Order entity and associated features.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\digital_store_order\Entity\Order;
+use Drupal\digital_store_order\Entity\OrderItem;
+
+define('DIGITAL_STORE_ORDER_BUNDLE', 'order');
+define('DIGITAL_STORE_ORDER_ITEM_BUNDLE', 'order_item');
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ */
+function digital_store_order_entity_bundle_field_info(EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  if (($entity_type->id() == 'node')) {
+    switch ($bundle) {
+      case Order::getBundle():
+        return Order::baseFieldDefinitions();
+        break;
+
+      case OrderItem::getBundle():
+        return OrderItem::baseFieldDefinitions();
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_bundle_create().
+ */
+function digital_store_order_entity_bundle_create($entity_type_id, $bundle) {
+  if (empty($entity_type_id) || ($entity_type_id != 'node')) {
+    return NULL;
+  }
+  switch ($bundle) {
+    case Order::getBundle():
+      return Order::createFields();
+      break;
+
+    case OrderItem::getBundle():
+      return OrderItem::createFields();
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function digital_store_order_node_update(EntityInterface $entity = NULL) {
+  /* @var \Drupal\node\NodeInterface $entity */
+  if (!$entity) {
+    return;
+  }
+  $bundle = $entity->bundle();
+  // Maintain some order fields on post save.
+  if ($bundle == Order::getBundle()) {
+    $order = new Order($entity);
+    $order->postSave();
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function digital_store_order_node_presave(EntityInterface $entity = NULL) {
+  /* @var \Drupal\node\NodeInterface $entity */
+  if (!$entity) {
+    return;
+  }
+  $bundle = $entity->bundle();
+  if ($bundle == Order::getBundle()) {
+    // Maintain some order fields on pre save.
+    $order = new Order($entity);
+    $order->preSave();
+  }
+  elseif ($bundle == OrderItem::getBundle()) {
+    // Maintain Order item total price up-to-date.
+    $order_item = new OrderItem($entity);
+    $order_item->preSave();
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function digital_store_order_node_delete(EntityInterface $entity = NULL) {
+  /* @var \Drupal\node\NodeInterface $entity */
+  if (!$entity) {
+    return;
+  }
+  $bundle = $entity->bundle();
+  // Delete the order items of a deleted order.
+  if ($bundle == Order::getBundle()) {
+    $order = new Order($entity);
+    $order->postDelete();
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function digital_store_order_theme($existing, $type, $theme, $path) {
+  return [
+    'digital_store_order_item_label' => [
+      'variables' => [
+        'product_url' => NULL,
+        'product_label' => NULL,
+        'variation_label' => t('Subscription type:'),
+        'variation_type' => NULL,
+      ],
+    ],
+  ];
+}

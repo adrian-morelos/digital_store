@@ -1,0 +1,52 @@
+// Block Local tasks.
+.b-l-t {
+  margin-bottom: 1rem;
+  ul.l-t {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+      margin-right: 1rem;
+      a {
+        font-weight: $btn-font-weight;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: $btn-border-width solid transparent;
+        @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+        @include transition($btn-transition);
+        -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        color: #fff;
+        background-color: $cyan;
+        border-color: $cyan;
+        // Share hover and focus styles
+        @include hover-focus {
+          text-decoration: none;
+          background-color: darken($cyan, 7.5%);
+          border-color: darken($cyan, 10%);
+        }
+        &:focus,
+        &.focus {
+          outline: 0;
+          box-shadow: $btn-focus-box-shadow;
+        }
+        &.is-active {
+          color: #fff;
+          background-color: $purple;
+          border-color: $purple;
+          &:hover {
+            background-color: darken($purple, 7.5%);
+            border-color: darken($purple, 10%);
+          }
+        }
+      }
+    }
+  }
+}

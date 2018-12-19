@@ -1,0 +1,6 @@
+<?php
+
+/**
+ * @file
+ * Defines the Currency entity and the Price field.
+ */

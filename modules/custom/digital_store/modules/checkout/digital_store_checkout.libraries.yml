@@ -1,0 +1,14 @@
+stripe:
+  version: VERSION
+  js:
+    "https://js.stripe.com/v3/": { minified: true }
+
+payment_form:
+  version: VERSION
+  js:
+    js/digital_store_stripe.form.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - digital_store_checkout/stripe

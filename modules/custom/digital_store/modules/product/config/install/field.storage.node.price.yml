@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store
+    - node
+id: node.price
+field_name: price
+entity_type: node
+type: price
+settings: {  }
+module: digital_store
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
