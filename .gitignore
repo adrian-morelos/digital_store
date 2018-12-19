@@ -3,6 +3,7 @@ sites/*/*settings*.php
 sites/example.sites.php
 sites/*/settings.local.php
 sites/*/settings.remote.php
+sites/default/default.services.yml
 
 ### OSX template
 *.DS_Store
