@@ -119,6 +119,19 @@ function digital_store_theme_page_attachments_alter(&$page) {
     ],
     'ie_image_toolbar'
   ];
+
+  // Prevent Google from indexing the site.
+  $page['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'robots',
+        'content' => 'noindex',
+      ],
+    ],
+    'robots_noindex'
+  ];
 }
 
 /**
