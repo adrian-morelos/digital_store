@@ -58,7 +58,12 @@ class TrackingSubscriber implements EventSubscriberInterface {
       'cid' => $cid,
       't' => 'pageview',
       'dl' => $dl->toString(),
+      'uip' => \Drupal::request()->getClientIp(),
     ];
+    $http_user_agent = $_SERVER['HTTP_USER_AGENT'] ?? NULL;
+    if ($http_user_agent) {
+      $parameters['ua'] = $http_user_agent;
+    }
     $this->analyticsClient->sendHit($parameters);
   }
 
