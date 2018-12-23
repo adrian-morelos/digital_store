@@ -1,0 +1,48 @@
+uuid: 0f2fdd39-ca43-487a-8b6c-b3fd8300255a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.changelog_item.field_date
+    - field.field.node.changelog_item.field_log
+    - field.field.node.changelog_item.field_type
+    - node.type.changelog_item
+  module:
+    - datetime
+    - user
+id: node.changelog_item.default
+targetEntityType: node
+bundle: changelog_item
+mode: default
+content:
+  field_date:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_log:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_type:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

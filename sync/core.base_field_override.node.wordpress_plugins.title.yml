@@ -1,0 +1,18 @@
+uuid: a6a60b33-4e7e-4a32-bed6-16503e8301c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.wordpress_plugins
+id: node.wordpress_plugins.title
+field_name: title
+entity_type: node
+bundle: wordpress_plugins
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

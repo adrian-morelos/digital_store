@@ -1,0 +1,22 @@
+uuid: 89ec2c6b-3f9d-4657-9396-806b2c1254ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.changelog_item
+id: node.changelog_item.promote
+field_name: promote
+entity_type: node
+bundle: changelog_item
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

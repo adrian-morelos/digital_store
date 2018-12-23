@@ -1,0 +1,13 @@
+uuid: dbad0ccf-30e4-47fc-9a89-da8fec5d4582
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.order_item
+_core:
+  default_config_hash: TsrO3NWQgK-BEGHQcs831nRp73qC72o2PbD7-aeOoy0
+id: node.order_item
+target_entity_type_id: node
+target_bundle: order_item
+default_langcode: site_default
+language_alterable: false

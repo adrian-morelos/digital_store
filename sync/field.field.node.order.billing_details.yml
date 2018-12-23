@@ -1,0 +1,57 @@
+uuid: 5f244711-56e3-4c26-b4ab-bbba3f0492e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.billing_details
+    - node.type.order
+  module:
+    - address
+id: node.order.billing_details
+field_name: billing_details
+entity_type: node
+bundle: order
+label: 'Billing Details'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    country_code: US
+    langcode: en
+    administrative_area: ''
+    locality: ''
+    dependent_locality: ''
+    postal_code: ''
+    sorting_code: ''
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: ''
+    family_name: ''
+default_value_callback: null
+settings:
+  available_countries:
+    CA: CA
+    US: CA
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: optional
+    familyName:
+      override: optional
+    organization:
+      override: optional
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    postalCode:
+      override: optional
+    locality:
+      override: optional
+    administrativeArea:
+      override: optional
+  fields: {  }
+field_type: address

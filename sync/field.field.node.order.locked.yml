@@ -1,0 +1,23 @@
+uuid: 806a564e-03eb-4648-9113-ce3c1b882f58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.locked
+    - node.type.order
+id: node.order.locked
+field_name: locked
+entity_type: node
+bundle: order
+label: Locked
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: null
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

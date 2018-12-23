@@ -1,0 +1,21 @@
+uuid: ab10c380-4315-4d50-8554-dad8b625ac73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_summary
+    - node.type.feature_box
+  module:
+    - text
+id: node.feature_box.field_feature_summary
+field_name: field_feature_summary
+entity_type: node
+bundle: feature_box
+label: 'Feature Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,28 @@
+uuid: 66890205-8f47-4787-9726-c30eb2b0393c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.customer
+    - node.type.order
+id: node.order.customer
+field_name: customer
+entity_type: node
+bundle: order
+label: Customer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\digital_store_order\Entity\Order::getCurrentUserId'
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

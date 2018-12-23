@@ -1,0 +1,33 @@
+uuid: ecc230a1-6450-4248-a43c-2f5941f6a695
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.wordpress_plugins.body
+    - field.field.node.wordpress_plugins.field_versions
+    - node.type.wordpress_plugins
+  module:
+    - text
+    - user
+id: node.wordpress_plugins.teaser
+targetEntityType: node
+bundle: wordpress_plugins
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_versions: true
+  langcode: true

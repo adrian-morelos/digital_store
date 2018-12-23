@@ -1,0 +1,19 @@
+uuid: bbf52089-ea07-4646-be8d-435d720db0b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method_remote_id
+    - node.type.payment_method
+id: node.payment_method.payment_method_remote_id
+field_name: payment_method_remote_id
+entity_type: node
+bundle: payment_method
+label: 'Remote ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: string

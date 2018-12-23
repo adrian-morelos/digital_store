@@ -1,0 +1,19 @@
+uuid: d486133b-c136-4f28-ba17-f2fa0e67f41c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.order_items
+field_name: order_items
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: true
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

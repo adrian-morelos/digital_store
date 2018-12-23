@@ -1,0 +1,57 @@
+uuid: 7300a533-5667-441b-a03b-e70fa22ba059
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method_billing_profile
+    - node.type.payment_method
+  module:
+    - address
+id: node.payment_method.payment_method_billing_profile
+field_name: payment_method_billing_profile
+entity_type: node
+bundle: payment_method
+label: 'Billing profile'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    country_code: US
+    langcode: en
+    administrative_area: ''
+    locality: ''
+    dependent_locality: ''
+    postal_code: ''
+    sorting_code: ''
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: ''
+    family_name: ''
+default_value_callback: null
+settings:
+  available_countries:
+    CA: CA
+    US: CA
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: optional
+    familyName:
+      override: optional
+    organization:
+      override: optional
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    postalCode:
+      override: optional
+    locality:
+      override: optional
+    administrativeArea:
+      override: optional
+  fields: {  }
+field_type: address

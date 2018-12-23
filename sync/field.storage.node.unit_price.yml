@@ -1,0 +1,19 @@
+uuid: 158925bd-c20c-4ed8-b2c0-720f1acfd926
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store
+    - node
+id: node.unit_price
+field_name: unit_price
+entity_type: node
+type: price
+settings: {  }
+module: digital_store
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

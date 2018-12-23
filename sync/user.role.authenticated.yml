@@ -1,0 +1,15 @@
+uuid: 70ca42c5-2e24-4463-9c36-ff0ca3cc169f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access devel information'
+  - 'access kint'
+  - 'view media'

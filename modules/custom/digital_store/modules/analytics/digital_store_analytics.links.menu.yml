@@ -1,0 +1,6 @@
+digital_store_analytics.configuration.stripe:
+  title: 'Google Analytics Settings'
+  route_name: 'digital_store_analytics.configuration.google_analytics'
+  parent: 'digital_store.configuration'
+  description: 'Google Analytics Measurement Protocol settings.'
+  weight: 12

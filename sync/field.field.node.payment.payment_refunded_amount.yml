@@ -1,0 +1,23 @@
+uuid: eb63fa69-68b1-4e07-b459-451c03cd8253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_refunded_amount
+    - node.type.payment
+  module:
+    - digital_store
+id: node.payment.payment_refunded_amount
+field_name: payment_refunded_amount
+entity_type: node
+bundle: payment
+label: 'Refunded amount'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  available_currencies:
+    USD: USD
+field_type: price

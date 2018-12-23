@@ -1,0 +1,7 @@
+digital_store_analytics.configuration.google_analytics:
+  path: '/admin/digital_store/config/google-analytics-measurement-protocol'
+  defaults:
+    _form: '\Drupal\digital_store_analytics\Form\GoogleAnalyticsSettingsForm'
+    _title: 'Google Analytics Measurement Protocol settings'
+  requirements:
+    _permission: 'access digital_store administration pages'

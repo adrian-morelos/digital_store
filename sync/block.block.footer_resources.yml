@@ -1,0 +1,24 @@
+uuid: b04b0870-d140-4bf1-88be-9434c6fb7332
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-resources
+  module:
+    - system
+  theme:
+    - digital_store_theme
+id: footer_resources
+theme: digital_store_theme
+region: footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer-resources'
+settings:
+  id: 'system_menu_block:footer-resources'
+  label: RESOURCES
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

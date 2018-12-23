@@ -1,0 +1,59 @@
+uuid: fa8e2100-149d-4344-ad2c-e566100b7573
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_version.body
+    - field.field.node.product_version.field_change_logs
+    - field.field.node.product_version.field_date
+    - field.field.node.product_version.field_file
+    - node.type.product_version
+  module:
+    - datetime
+    - file
+    - text
+    - user
+id: node.product_version.default
+targetEntityType: node
+bundle: product_version
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_change_logs:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_file:
+    weight: 103
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

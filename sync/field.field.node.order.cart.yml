@@ -1,0 +1,23 @@
+uuid: bcfd03d6-b1ac-4abf-bdb5-f6faf2da6ebf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.cart
+    - node.type.order
+id: node.order.cart
+field_name: cart
+entity_type: node
+bundle: order
+label: Cart
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: null
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

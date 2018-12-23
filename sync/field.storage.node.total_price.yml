@@ -1,0 +1,19 @@
+uuid: 9fb89602-d33c-4b31-9ba4-99dca976ddb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store
+    - node
+id: node.total_price
+field_name: total_price
+entity_type: node
+type: price
+settings: {  }
+module: digital_store
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

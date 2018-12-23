@@ -1,0 +1,14 @@
+uuid: 3978e678-54cc-466e-9b29-8608679828fe
+name: WPGle
+mail: ing.adrianmorelos@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

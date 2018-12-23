@@ -1,0 +1,14 @@
+uuid: 9e9c06c8-a9fb-4e04-8325-6dd4f32d3212
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.shop_manager
+  module:
+    - user
+id: user_add_role_action.shop_manager
+label: 'Add the Shop Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: shop_manager

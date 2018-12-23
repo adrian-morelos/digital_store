@@ -1,0 +1,29 @@
+uuid: 44f05a3f-e645-46fe-9590-b1a1beb586b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: I-qMdvnIgnVT6g9xrihh_C6eG0n89QJYCbzWR4GgFsU
+id: node.product_type
+field_name: product_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: wordpress.plugin
+      label: 'WordPress Plugin'
+    -
+      value: wordpress.theme
+      label: 'WordPress Theme'
+  allowed_values_function: ''
+module: options
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

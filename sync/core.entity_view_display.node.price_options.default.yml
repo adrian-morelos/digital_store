@@ -1,0 +1,59 @@
+uuid: 9bc2db23-5758-45f0-97eb-4726ce98de30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.price_options.field_label
+    - field.field.node.price_options.field_price
+    - field.field.node.price_options.field_product_id
+    - field.field.node.price_options.field_quantity
+    - field.field.node.price_options.field_sku
+    - node.type.price_options
+  module:
+    - digital_store
+    - user
+id: node.price_options.default
+targetEntityType: node
+bundle: price_options
+mode: default
+content:
+  field_label:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_price:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: price_default
+    region: content
+  field_quantity:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_sku:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_product_id: true
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: e5fa01e5-a444-4f8a-95cc-c963f636a20d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_completed
+    - node.type.payment
+id: node.payment.payment_completed
+field_name: payment_completed
+entity_type: node
+bundle: payment
+label: Completed
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: timestamp

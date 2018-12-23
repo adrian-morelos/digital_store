@@ -1,0 +1,19 @@
+uuid: 3e44e2fa-26ff-48cc-9685-a1bd0376bf67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.placed
+    - node.type.order
+id: node.order.placed
+field_name: placed
+entity_type: node
+bundle: order
+label: Placed
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: timestamp

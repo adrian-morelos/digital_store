@@ -1,0 +1,74 @@
+uuid: 6d38f250-ec8f-4b30-ae84-158b494f89b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.order_item.order
+    - field.field.node.order_item.order_item_quantity
+    - field.field.node.order_item.overridden_unit_price
+    - field.field.node.order_item.purchased_entity
+    - field.field.node.order_item.total_price
+    - field.field.node.order_item.unit_price
+    - node.type.order_item
+  module:
+    - digital_store
+    - user
+_core:
+  default_config_hash: fNTcTAYgmTR5iyCdDDk9hP2JItnYFBfaV9-wdD6nkFE
+id: node.order_item.default
+targetEntityType: node
+bundle: order_item
+mode: default
+content:
+  order:
+    type: entity_reference_label
+    weight: 1
+    settings:
+      link: true
+    region: content
+    label: above
+    third_party_settings: {  }
+  order_item_quantity:
+    label: above
+    type: number_integer
+    weight: 2
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    region: content
+    third_party_settings: {  }
+  overridden_unit_price:
+    label: above
+    type: boolean
+    weight: 3
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    region: content
+    third_party_settings: {  }
+  purchased_entity:
+    type: entity_reference_label
+    weight: 0
+    settings:
+      link: true
+    region: content
+    label: above
+    third_party_settings: {  }
+  total_price:
+    label: hidden
+    type: price_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unit_price:
+    label: hidden
+    type: price_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

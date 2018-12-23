@@ -1,0 +1,29 @@
+uuid: e5cad82f-f04d-496c-aa23-12eb138bb4e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_change_logs
+    - node.type.changelog_item
+    - node.type.product_version
+id: node.product_version.field_change_logs
+field_name: field_change_logs
+entity_type: node
+bundle: product_version
+label: 'Change Logs'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      changelog_item: changelog_item
+    sort:
+      field: field_date
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

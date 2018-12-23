@@ -1,0 +1,22 @@
+uuid: c979951e-c83a-42de-8d0c-3a4f96dfde79
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - digital_store_theme
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: digital_store_theme_messages
+theme: digital_store_theme
+region: content
+weight: -1
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,44 @@
+uuid: 3144bc4c-4922-407b-a7ef-18e7894d478a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.field_featured_image
+    - field.field.node.product.field_product_attributes
+    - field.field.node.product.field_product_pricing_config
+    - field.field.node.product.product_type
+    - field.field.node.product.variations
+    - node.type.product
+  module:
+    - digital_store_cart
+    - user
+_core:
+  default_config_hash: RA24ORwWoq4xe2sJQV4iApFL9PgeWGJGpvcCofJTgl8
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  field_product_attributes:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  variations:
+    type: digital_store_add_to_cart
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      combine: '1'
+    third_party_settings: {  }
+hidden:
+  field_featured_image: true
+  field_product_pricing_config: true
+  langcode: true
+  links: true
+  product_type: true

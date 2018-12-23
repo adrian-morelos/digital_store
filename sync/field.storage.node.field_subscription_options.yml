@@ -1,0 +1,19 @@
+uuid: 9fff334c-b95d-49dd-8a25-10faab23f7dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_subscription_options
+field_name: field_subscription_options
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

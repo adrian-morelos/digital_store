@@ -1,0 +1,54 @@
+uuid: 1b5b641e-4d63-45e1-8fbf-40917148f2d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.wordpress_plugin.field_media_file
+    - image.style.thumbnail
+    - media.type.wordpress_plugin
+  module:
+    - file
+    - image
+    - user
+id: media.wordpress_plugin.default
+targetEntityType: media
+bundle: wordpress_plugin
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_file:
+    weight: 6
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  thumbnail:
+    type: image
+    weight: 5
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true

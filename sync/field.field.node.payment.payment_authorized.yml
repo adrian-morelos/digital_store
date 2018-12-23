@@ -1,0 +1,19 @@
+uuid: f93382e1-2ee6-4ca4-8ef2-38d59ebeeaa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_authorized
+    - node.type.payment
+id: node.payment.payment_authorized
+field_name: payment_authorized
+entity_type: node
+bundle: payment
+label: Authorized
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: timestamp

@@ -1,0 +1,20 @@
+uuid: ae1e99eb-4002-46b2-885d-0ed4990dcabe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.payment_method_owner
+field_name: payment_method_owner
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

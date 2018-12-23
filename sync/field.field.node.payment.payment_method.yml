@@ -1,0 +1,29 @@
+uuid: dc9031d0-46d7-436a-851f-79ca1d693489
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method
+    - node.type.payment
+id: node.payment.payment_method
+field_name: payment_method
+entity_type: node
+bundle: payment
+label: 'Payment method'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:node'
+  handler_settings:
+    filter:
+      type: _none
+    target_bundles:
+      payment_method: payment_method
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

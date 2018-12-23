@@ -1,0 +1,9 @@
+uuid: 759a5bb5-5ae0-4a51-86a7-f3511be9d493
+langcode: en
+status: true
+dependencies: {  }
+name: 'Payment Gateway'
+vid: payment_gateway
+description: 'Defines the payment gateway entity.'
+hierarchy: 0
+weight: 0

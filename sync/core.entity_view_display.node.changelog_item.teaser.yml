@@ -1,0 +1,27 @@
+uuid: 6a682c1e-2cff-46cd-bc18-5d5f3aedaf97
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.changelog_item.field_date
+    - field.field.node.changelog_item.field_log
+    - field.field.node.changelog_item.field_type
+    - node.type.changelog_item
+  module:
+    - user
+id: node.changelog_item.teaser
+targetEntityType: node
+bundle: changelog_item
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date: true
+  field_log: true
+  field_type: true
+  langcode: true

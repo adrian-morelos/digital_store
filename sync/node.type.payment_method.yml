@@ -1,0 +1,22 @@
+uuid: 51bf7b99-1735-442e-b53d-ccc349f7a9a2
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - digital_store
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: LjPFnBvXiQu0kjCAU853E_YL88W-764C_AD-OevhzCg
+name: 'Payment Method'
+type: payment_method
+description: 'Defines the payment method entity.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,69 @@
+uuid: ea26503c-afa3-439e-8913-a8e43a0b0c12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.order_item.order
+    - field.field.node.order_item.order_item_quantity
+    - field.field.node.order_item.overridden_unit_price
+    - field.field.node.order_item.purchased_entity
+    - field.field.node.order_item.total_price
+    - field.field.node.order_item.unit_price
+    - node.type.order_item
+  module:
+    - digital_store
+_core:
+  default_config_hash: XbxuDUT-dq1BW55ieaUOmV0qPpKLOW5ZxKVVNiiVXBE
+id: node.order_item.default
+targetEntityType: node
+bundle: order_item
+mode: default
+content:
+  order_item_quantity:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  overridden_unit_price:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 1
+    region: content
+    third_party_settings: {  }
+  purchased_entity:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unit_price:
+    type: price_default
+    weight: 3
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  order: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  total_price: true
+  uid: true
+  url_redirects: true

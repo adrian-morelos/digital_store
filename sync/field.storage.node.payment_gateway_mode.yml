@@ -1,0 +1,27 @@
+uuid: c737ff87-826e-4ea3-85d4-4000a6d775dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.payment_gateway_mode
+field_name: payment_gateway_mode
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Development
+      label: Development
+    -
+      value: production
+      label: Production
+  allowed_values_function: ''
+module: options
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

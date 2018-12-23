@@ -1,0 +1,28 @@
+uuid: abe28089-6525-4c26-9f7e-c1128f8272fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_id
+    - node.type.price_options
+    - node.type.wordpress_plugins
+id: node.price_options.field_product_id
+field_name: field_product_id
+entity_type: node
+bundle: price_options
+label: 'Product ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      wordpress_plugins: wordpress_plugins
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

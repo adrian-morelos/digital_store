@@ -1,0 +1,45 @@
+uuid: 5cf5beff-2b4c-46de-8fe4-9e78fe78a1d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.state
+field_name: state
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: draft
+      label: 'Shopping Cart'
+    -
+      value: pending_payment
+      label: 'Pending Payment'
+    -
+      value: failed
+      label: Failed
+    -
+      value: processing
+      label: Processing
+    -
+      value: completed
+      label: Completed
+    -
+      value: on_hold
+      label: On-Hold
+    -
+      value: cancelled
+      label: Cancelled
+    -
+      value: refunded
+      label: Refunded
+  allowed_values_function: ''
+module: options
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

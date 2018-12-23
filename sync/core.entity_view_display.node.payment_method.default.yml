@@ -1,0 +1,94 @@
+uuid: d123f81a-e265-4b1e-99bd-e02d43f587dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.payment_method.card_exp_month
+    - field.field.node.payment_method.card_exp_year
+    - field.field.node.payment_method.card_number
+    - field.field.node.payment_method.card_type
+    - field.field.node.payment_method.payment_method_billing_profile
+    - field.field.node.payment_method.payment_method_expires
+    - field.field.node.payment_method.payment_method_gateway
+    - field.field.node.payment_method.payment_method_gateway_mode
+    - field.field.node.payment_method.payment_method_is_default
+    - field.field.node.payment_method.payment_method_owner
+    - field.field.node.payment_method.payment_method_remote_id
+    - field.field.node.payment_method.payment_method_reusable
+    - node.type.payment_method
+  module:
+    - address
+    - user
+_core:
+  default_config_hash: S1VX2SaJkFHWOP0T4lU8AMhj5ZXXa-R03b_HakeKQJs
+id: node.payment_method.default
+targetEntityType: node
+bundle: payment_method
+mode: default
+content:
+  payment_method_billing_profile:
+    type: address_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  payment_method_expires:
+    label: hidden
+    type: timestamp
+    weight: 6
+    settings:
+      date_format: custom
+      custom_date_format: n/Y
+      timezone: ''
+    region: content
+    third_party_settings: {  }
+  payment_method_gateway:
+    type: entity_reference_label
+    weight: 0
+    settings:
+      link: true
+    region: content
+    label: above
+    third_party_settings: {  }
+  payment_method_gateway_mode:
+    label: above
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  payment_method_owner:
+    label: above
+    type: author
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  payment_method_remote_id:
+    type: string
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  payment_method_reusable:
+    type: boolean
+    weight: 5
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+hidden:
+  card_exp_month: true
+  card_exp_year: true
+  card_number: true
+  card_type: true
+  langcode: true
+  links: true
+  payment_method_is_default: true

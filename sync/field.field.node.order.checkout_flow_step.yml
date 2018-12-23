@@ -1,0 +1,23 @@
+uuid: 1cfbd3b6-45ca-4eed-9cd8-19200cb585ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.checkout_flow_step
+    - node.type.order
+  module:
+    - options
+id: node.order.checkout_flow_step
+field_name: checkout_flow_step
+entity_type: node
+bundle: order
+label: 'Checkout Flow Step'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: shopping.cart
+default_value_callback: null
+settings: {  }
+field_type: list_string

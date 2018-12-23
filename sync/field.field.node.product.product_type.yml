@@ -1,0 +1,23 @@
+uuid: 4d6c1171-167e-4a66-b858-9fd21f0a3b94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.product_type
+    - node.type.product
+  module:
+    - options
+_core:
+  default_config_hash: vkROc5rMsuEmr8ZbNodcCla6T1kYZJKTjm5Rcln7m3Q
+id: node.product.product_type
+field_name: product_type
+entity_type: node
+bundle: product
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: list_string

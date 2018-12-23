@@ -1,0 +1,20 @@
+uuid: ec4bf6ee-9c8c-4d02-8304-5902bc56f1eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_exp_year
+field_name: card_exp_year
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: small
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

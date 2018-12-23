@@ -1,0 +1,13 @@
+uuid: 86581179-1089-46f7-9073-b662b0b1def7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.payment
+_core:
+  default_config_hash: Rx49m61BT-cSGKVaUZyX3YJ_-R3Ldsz4AQq0OwJpNMc
+id: node.payment
+target_entity_type_id: node
+target_bundle: payment
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,20 @@
+uuid: d60c37f6-e695-4a93-bf6f-c6ce820ed4bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store_cart
+  theme:
+    - digital_store_theme
+id: cartmenu
+theme: digital_store_theme
+region: header
+weight: 0
+provider: null
+plugin: digital_store_cart
+settings:
+  id: digital_store_cart
+  label: 'Cart Menu'
+  provider: digital_store_cart
+  label_display: '0'
+visibility: {  }

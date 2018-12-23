@@ -1,0 +1,108 @@
+uuid: 89a41a42-8850-4b17-bbf9-23becb75f5ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.field_featured_image
+    - field.field.node.product.field_product_attributes
+    - field.field.node.product.field_product_pricing_config
+    - field.field.node.product.product_type
+    - field.field.node.product.variations
+    - image.style.thumbnail
+    - node.type.product
+  module:
+    - digital_store_product
+    - image
+    - inline_entity_form
+    - path
+_core:
+  default_config_hash: aMJJCPIboonxBnffsbEM9QpxLnFQAeM3JdcoD0EYk3Q
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  field_featured_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_product_attributes:
+    type: inline_entity_form_complex
+    weight: 4
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: attribute
+      label_plural: attributes
+      collapsible: true
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+  field_product_pricing_config:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: product_pricing_config_default
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  product_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  variations:
+    type: inline_entity_form_complex
+    weight: 3
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: variation
+      label_plural: variations
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

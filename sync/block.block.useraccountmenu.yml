@@ -1,0 +1,24 @@
+uuid: 9506866c-b33d-4786-a8b3-68f9b1d38fb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - digital_store_theme
+id: useraccountmenu
+theme: digital_store_theme
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

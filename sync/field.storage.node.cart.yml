@@ -1,0 +1,18 @@
+uuid: 8a1b8770-6823-4905-9c20-0eec3d74e47d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.cart
+field_name: cart
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: 65e88bba-8717-41ed-ad54-76c2423b7193
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Feature box'
+type: feature_box
+description: 'Feature box used as a product attribute.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

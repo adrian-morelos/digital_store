@@ -1,0 +1,29 @@
+uuid: c9863aa7-c19e-44f1-a322-ed0020aad872
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.attribute_web_flow.attribute_featured_image
+    - node.type.attribute_web_flow
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: LKso-HAkhdT1gFGnCa9c9eJ3ENPBm0u4jduublghygg
+id: node.attribute_web_flow.default
+targetEntityType: node
+bundle: attribute_web_flow
+mode: default
+content:
+  attribute_featured_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true
+  links: true

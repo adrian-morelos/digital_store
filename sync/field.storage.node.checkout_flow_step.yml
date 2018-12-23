@@ -1,0 +1,54 @@
+uuid: d90c66d4-f99d-42ac-9a69-c30dc1535610
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.checkout_flow_step
+field_name: checkout_flow_step
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: draft
+      label: 'Shopping Cart'
+    -
+      value: pending_payment
+      label: 'Pending Payment'
+    -
+      value: failed
+      label: Failed
+    -
+      value: processing
+      label: Processing
+    -
+      value: completed
+      label: Completed
+    -
+      value: on_hold
+      label: On-Hold
+    -
+      value: cancelled
+      label: Cancelled
+    -
+      value: refunded
+      label: Refunded
+    -
+      value: shopping.cart
+      label: 'Shopping Cart'
+    -
+      value: payment
+      label: 'Payment Information'
+    -
+      value: order-received
+      label: Completed
+  allowed_values_function: ''
+module: options
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: c5161e78-5f30-40b1-9baf-92607a30dc70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.order_total_price
+    - node.type.order
+  module:
+    - digital_store
+id: node.order.order_total_price
+field_name: order_total_price
+entity_type: node
+bundle: order
+label: 'Total price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  available_currencies:
+    USD: USD
+field_type: price

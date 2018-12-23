@@ -1,0 +1,20 @@
+uuid: 6216483d-8959-4195-afae-9abc3498cab6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.order_item_quantity
+field_name: order_item_quantity
+entity_type: node
+type: integer
+settings:
+  unsigned: true
+  size: normal
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

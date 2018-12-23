@@ -1,0 +1,13 @@
+uuid: 4899bcf4-2d3c-40aa-8e46-5118e09f1dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.order
+_core:
+  default_config_hash: TYKNFgo1vmZ-R9qL7MqQc7UweroVTSPCqbK4DIh6LEo
+id: node.order
+target_entity_type_id: node
+target_bundle: order
+default_langcode: site_default
+language_alterable: false

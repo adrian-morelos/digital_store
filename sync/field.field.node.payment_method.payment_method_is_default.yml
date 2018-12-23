@@ -1,0 +1,23 @@
+uuid: b085b39f-228e-4497-b916-790b4efccfb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method_is_default
+    - node.type.payment_method
+id: node.payment_method.payment_method_is_default
+field_name: payment_method_is_default
+entity_type: node
+bundle: payment_method
+label: Default
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: null
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 4c6db533-0a3b-41a1-942c-f30d1af81102
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.locked
+field_name: locked
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

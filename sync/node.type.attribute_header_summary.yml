@@ -1,0 +1,22 @@
+uuid: 9816d5f8-f833-4602-bd71-3286de04d92f
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store_product
+    - menu_ui
+third_party_settings:
+  digital_store_product:
+    is_product_attribute: 1
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: jtAfI2BQIT3vnJL8Ov7ggsgixBaJZ4PLfdyAcKNQ-_o
+name: 'Attribute - Header Summary'
+type: attribute_header_summary
+description: 'Product Attribute Header Summary.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

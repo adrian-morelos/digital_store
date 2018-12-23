@@ -1,0 +1,29 @@
+uuid: d528e3a8-22f3-432d-b346-7b195c6b669d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_versions
+    - node.type.product_version
+    - node.type.wordpress_plugins
+id: node.wordpress_plugins.field_versions
+field_name: field_versions
+entity_type: node
+bundle: wordpress_plugins
+label: Versions
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      product_version: product_version
+    sort:
+      field: field_date
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

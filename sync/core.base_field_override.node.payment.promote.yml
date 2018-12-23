@@ -1,0 +1,24 @@
+uuid: 60ab067e-78a4-43ea-8d24-a763511493d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.payment
+_core:
+  default_config_hash: DiCx6lGzZkM_mOvu2r22urvnQNQX7YcbJbWNazLKRKU
+id: node.payment.promote
+field_name: promote
+entity_type: node
+bundle: payment
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

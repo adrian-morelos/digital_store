@@ -1,0 +1,29 @@
+uuid: bce95d44-a6fb-428b-bd4f-90ee7b26891f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.order_items
+    - node.type.order
+id: node.order.order_items
+field_name: order_items
+entity_type: node
+bundle: order
+label: 'Order items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:node'
+  handler_settings:
+    filter:
+      type: _none
+    target_bundles:
+      order_item: order_item
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

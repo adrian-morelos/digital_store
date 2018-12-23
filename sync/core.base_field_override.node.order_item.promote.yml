@@ -1,0 +1,24 @@
+uuid: ee317070-138c-440d-99e1-4e330e17962b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.order_item
+_core:
+  default_config_hash: Ju9CX_cRvSQS48H47_CMzjj6pvJ-xF8WKOVdXHmNy9Y
+id: node.order_item.promote
+field_name: promote
+entity_type: node
+bundle: order_item
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

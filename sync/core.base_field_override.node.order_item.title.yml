@@ -1,0 +1,20 @@
+uuid: 0de4e53e-6030-4110-ade1-9abc1b98c615
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.order_item
+_core:
+  default_config_hash: qI_sSPDhHU0pNxSEj9amyP4_4CKPmIkJG5BqZzmSH7w
+id: node.order_item.title
+field_name: title
+entity_type: node
+bundle: order_item
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

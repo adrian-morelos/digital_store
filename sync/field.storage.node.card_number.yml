@@ -1,0 +1,21 @@
+uuid: 7d6887b5-d13e-4dc7-bef5-980e0d9b3ef1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_number
+field_name: card_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

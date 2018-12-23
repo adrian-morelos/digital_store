@@ -1,0 +1,39 @@
+uuid: a2aa448e-e749-422d-959f-5788c2d4468f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.payment_state
+field_name: payment_state
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: new
+      label: New
+    -
+      value: authorization
+      label: Authorization
+    -
+      value: partially_refunded
+      label: 'Partially Refunded'
+    -
+      value: refunded
+      label: Refunded
+    -
+      value: completed
+      label: Completed
+    -
+      value: authorization_voided
+      label: 'Authorization Voided'
+  allowed_values_function: ''
+module: options
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

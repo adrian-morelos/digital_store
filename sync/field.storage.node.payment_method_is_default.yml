@@ -1,0 +1,18 @@
+uuid: da155730-f1f4-40d7-9e8c-199fbb5830ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.payment_method_is_default
+field_name: payment_method_is_default
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

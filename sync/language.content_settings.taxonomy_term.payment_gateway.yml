@@ -1,0 +1,11 @@
+uuid: 796a4b59-eb95-4e73-a52c-ef8ef9149ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.payment_gateway
+id: taxonomy_term.payment_gateway
+target_entity_type_id: taxonomy_term
+target_bundle: payment_gateway
+default_langcode: site_default
+language_alterable: false

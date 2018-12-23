@@ -1,0 +1,20 @@
+uuid: 2097160a-4d01-4638-94e0-83763fd1d42c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - digital_store_theme
+id: mainpagecontent
+theme: digital_store_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

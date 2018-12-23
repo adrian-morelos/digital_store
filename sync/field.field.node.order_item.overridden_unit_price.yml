@@ -1,0 +1,23 @@
+uuid: 24904045-297b-47cd-a615-80fab3e9c5e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.overridden_unit_price
+    - node.type.order_item
+id: node.order_item.overridden_unit_price
+field_name: overridden_unit_price
+entity_type: node
+bundle: order_item
+label: 'Overridden unit price'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: null
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

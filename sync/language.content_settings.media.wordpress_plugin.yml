@@ -1,0 +1,11 @@
+uuid: d7c496e7-3a59-4892-b1d3-01339ca3404c
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.wordpress_plugin
+id: media.wordpress_plugin
+target_entity_type_id: media
+target_bundle: wordpress_plugin
+default_langcode: en
+language_alterable: false

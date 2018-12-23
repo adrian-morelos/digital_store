@@ -1,0 +1,19 @@
+uuid: d757ce37-f897-4360-baf7-9c4dbc053b7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.completed
+    - node.type.order
+id: node.order.completed
+field_name: completed
+entity_type: node
+bundle: order
+label: Completed
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: timestamp

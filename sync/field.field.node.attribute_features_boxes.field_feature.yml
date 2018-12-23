@@ -1,0 +1,28 @@
+uuid: 88536606-26d9-4aea-b31c-36b92c256ea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature
+    - node.type.attribute_features_boxes
+    - node.type.feature_box
+id: node.attribute_features_boxes.field_feature
+field_name: field_feature
+entity_type: node
+bundle: attribute_features_boxes
+label: Features
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      feature_box: feature_box
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

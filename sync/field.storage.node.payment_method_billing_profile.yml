@@ -1,0 +1,19 @@
+uuid: 2e886323-2961-496c-9fd5-48a8c0e5cf9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - node
+id: node.payment_method_billing_profile
+field_name: payment_method_billing_profile
+entity_type: node
+type: address
+settings: {  }
+module: address
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

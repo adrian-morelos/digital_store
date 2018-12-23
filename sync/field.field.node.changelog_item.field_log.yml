@@ -1,0 +1,19 @@
+uuid: fcefbfb2-e9eb-4ebb-b075-897eecfbeb90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_log
+    - node.type.changelog_item
+id: node.changelog_item.field_log
+field_name: field_log
+entity_type: node
+bundle: changelog_item
+label: Log
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

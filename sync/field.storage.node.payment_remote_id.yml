@@ -1,0 +1,21 @@
+uuid: 8f98e3ec-8b7c-4c44-a1bb-1152c3e52fa5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.payment_remote_id
+field_name: payment_remote_id
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

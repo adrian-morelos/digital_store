@@ -1,0 +1,23 @@
+uuid: b1802e62-3a8d-438d-9adc-4504a0c59efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.attribute_subheader
+    - node.type.attribute_header_summary
+_core:
+  default_config_hash: 9SFPkEV0-e4jfvFy5lQZq_eNdIQ0D1AtgTKJbccA-Hc
+id: node.attribute_header_summary.attribute_subheader
+field_name: attribute_subheader
+entity_type: node
+bundle: attribute_header_summary
+label: Subheader
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: null
+settings: {  }
+field_type: string

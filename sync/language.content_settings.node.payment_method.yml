@@ -1,0 +1,13 @@
+uuid: bcf94355-7a6b-4b7c-a4e8-137ebf2e0b0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.payment_method
+_core:
+  default_config_hash: g6Hj5Dj7n586lECj0VDdsij62MrKx00IJFwhwwFQ9-s
+id: node.payment_method
+target_entity_type_id: node
+target_bundle: payment_method
+default_langcode: site_default
+language_alterable: false

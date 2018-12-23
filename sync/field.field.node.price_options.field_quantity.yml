@@ -1,0 +1,25 @@
+uuid: 51dcb402-da4c-4c1f-b30b-8d9462d0a86c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quantity
+    - node.type.price_options
+id: node.price_options.field_quantity
+field_name: field_quantity
+entity_type: node
+bundle: price_options
+label: Quantity
+description: 'Sites quantity.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,21 @@
+uuid: c10d33bd-6a5d-40ac-8948-76fe25a92db1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.sku
+    - node.type.product_variation
+_core:
+  default_config_hash: jwWnDN8vfxkFw_pO2c8pMA5HjjeIlr0l3OrQa6l0iEM
+id: node.product_variation.sku
+field_name: sku
+entity_type: node
+bundle: product_variation
+label: SKU
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: string

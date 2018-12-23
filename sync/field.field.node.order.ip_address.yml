@@ -1,0 +1,21 @@
+uuid: 38766083-8662-44ba-8334-f2201241bbd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.ip_address
+    - node.type.order
+id: node.order.ip_address
+field_name: ip_address
+entity_type: node
+bundle: order
+label: 'IP address'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: null
+settings: {  }
+field_type: string

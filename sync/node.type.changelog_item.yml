@@ -1,0 +1,17 @@
+uuid: d448daf5-946b-482d-9a36-69de2a7d4df2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Changelog Item'
+type: changelog_item
+description: 'Changelog Item'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: e92ef28b-b940-4644-b38f-b712ed1c8fc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.mail
+    - node.type.order
+id: node.order.mail
+field_name: mail
+entity_type: node
+bundle: order
+label: 'Contact email'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: null
+settings: {  }
+field_type: email

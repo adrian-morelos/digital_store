@@ -1,0 +1,19 @@
+uuid: 79375a86-1798-42c8-8661-a58f7f3040d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_remote_state
+    - node.type.payment
+id: node.payment.payment_remote_state
+field_name: payment_remote_state
+entity_type: node
+bundle: payment
+label: 'Remote State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: string

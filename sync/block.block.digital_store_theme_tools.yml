@@ -1,0 +1,26 @@
+uuid: 2345fa55-ec36-494f-90ff-b1196274d22d
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - digital_store_theme
+_core:
+  default_config_hash: xCOijLdB1-UgXxQ9a0D1_pd8vxNEhfMnxXZc8jYhHjs
+id: digital_store_theme_tools
+theme: digital_store_theme
+region: footer
+weight: -2
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

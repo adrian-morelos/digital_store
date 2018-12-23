@@ -1,0 +1,67 @@
+uuid: 23bcd6b2-a5d0-4aa2-9405-83e07bd412e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.wordpress_plugins.body
+    - field.field.node.wordpress_plugins.field_category
+    - field.field.node.wordpress_plugins.field_featured_image
+    - field.field.node.wordpress_plugins.field_subscription_options
+    - field.field.node.wordpress_plugins.field_versions
+    - node.type.wordpress_plugins
+  module:
+    - digital_store
+    - image
+    - text
+    - user
+id: node.wordpress_plugins.default
+targetEntityType: node
+bundle: wordpress_plugins
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_category:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_featured_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_subscription_options:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_subscription_options
+    region: content
+  field_versions:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

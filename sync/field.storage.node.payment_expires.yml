@@ -1,0 +1,18 @@
+uuid: 4ff6982a-7a95-451b-8bd4-4cb61776d1b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.payment_expires
+field_name: payment_expires
+entity_type: node
+type: timestamp
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

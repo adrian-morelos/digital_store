@@ -1,0 +1,9 @@
+uuid: 51275e69-6569-435e-b0e6-38da2fbecb29
+langcode: en
+status: true
+dependencies: {  }
+name: 'Change Type'
+vid: change_type
+description: ''
+hierarchy: 0
+weight: 0

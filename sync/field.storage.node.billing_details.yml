@@ -1,0 +1,19 @@
+uuid: ecef56f7-89d0-4397-81ee-8462192a4dcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - node
+id: node.billing_details
+field_name: billing_details
+entity_type: node
+type: address
+settings: {  }
+module: address
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 6bc040f1-872e-4795-8362-723131563fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.card_exp_year
+    - node.type.payment_method
+id: node.payment_method.card_exp_year
+field_name: card_exp_year
+entity_type: node
+bundle: payment_method
+label: 'Card expiration year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

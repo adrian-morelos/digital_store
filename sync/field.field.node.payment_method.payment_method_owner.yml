@@ -1,0 +1,28 @@
+uuid: 60ee0add-e652-4f47-8161-94a49cd30acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method_owner
+    - node.type.payment_method
+id: node.payment_method.payment_method_owner
+field_name: payment_method_owner
+entity_type: node
+bundle: payment_method
+label: Owner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\digital_store_payment\Entity\PaymentMethod::getCurrentUserId'
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

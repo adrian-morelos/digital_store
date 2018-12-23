@@ -1,0 +1,22 @@
+uuid: db2056e6-3fe6-4a6a-a136-d30102c71a28
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: AZI1LlsIlKf9ntfcHzp9mVzIz4Aq6jVEflRwsTG3Sd8
+id: node.variation_bundle
+field_name: variation_bundle
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

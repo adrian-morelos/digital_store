@@ -1,0 +1,33 @@
+uuid: f1f927af-46bc-4863-9479-818aa277437e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feature_box.field_feature_summary
+    - field.field.node.feature_box.field_icon
+    - node.type.feature_box
+  module:
+    - text
+    - user
+id: node.feature_box.default
+targetEntityType: node
+bundle: feature_box
+mode: default
+content:
+  field_feature_summary:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_icon:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true
+  links: true

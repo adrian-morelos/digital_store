@@ -1,0 +1,5 @@
+publishable_key: pk_test_CeoNiAlGTyFJ6YQ1I3mAWOen
+secret_key: sk_test_iY1cz69qz7qKj00h7i6xrX3g
+connection_environment: development
+stripe_api_endpoint: 'https://api.stripe.com/v1'
+capture: '1'

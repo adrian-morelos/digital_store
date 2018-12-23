@@ -1,0 +1,21 @@
+uuid: 0e508a44-a303-4134-a4b6-bbcb8893ceee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_pricing_config
+    - node.type.product
+  module:
+    - digital_store_product
+id: node.product.field_product_pricing_config
+field_name: field_product_pricing_config
+entity_type: node
+bundle: product
+label: 'Product''s pricing config'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: product_pricing_config

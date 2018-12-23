@@ -1,0 +1,24 @@
+uuid: 58ff534b-ce32-417f-9bf8-3fed3845ce97
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-company
+  module:
+    - system
+  theme:
+    - digital_store_theme
+id: footer_company
+theme: digital_store_theme
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer-company'
+settings:
+  id: 'system_menu_block:footer-company'
+  label: COMPANY
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

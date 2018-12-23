@@ -1,0 +1,21 @@
+uuid: 83334b48-32ec-4bad-bed4-7463b5f4111f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: BXviUFjHQA4O0B3UHHWmDeXpvWDh5-_DhOOQhoXNDSk
+id: node.variations
+field_name: variations
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: true
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

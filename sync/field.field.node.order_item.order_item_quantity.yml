@@ -1,0 +1,25 @@
+uuid: 3222c593-d4d4-4da0-9d0d-608c616e3c8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.order_item_quantity
+    - node.type.order_item
+id: node.order_item.order_item_quantity
+field_name: order_item_quantity
+entity_type: node
+bundle: order_item
+label: Quantity
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: null
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,24 @@
+uuid: 5db46573-0ea1-45fe-b067-5765b0048dde
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-support
+  module:
+    - system
+  theme:
+    - digital_store_theme
+id: footer_support
+theme: digital_store_theme
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:footer-support'
+settings:
+  id: 'system_menu_block:footer-support'
+  label: SUPPORT
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

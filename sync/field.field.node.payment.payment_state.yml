@@ -1,0 +1,21 @@
+uuid: 7b245f08-a5d3-4275-90a6-ebe0f7b7d5a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_state
+    - node.type.payment
+  module:
+    - options
+id: node.payment.payment_state
+field_name: payment_state
+entity_type: node
+bundle: payment
+label: State
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: list_string

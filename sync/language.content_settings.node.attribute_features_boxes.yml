@@ -1,0 +1,11 @@
+uuid: ac56f6a7-b973-407d-8ea5-62a35d9577ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.attribute_features_boxes
+id: node.attribute_features_boxes
+target_entity_type_id: node
+target_bundle: attribute_features_boxes
+default_langcode: site_default
+language_alterable: false

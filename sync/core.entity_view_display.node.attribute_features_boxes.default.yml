@@ -1,0 +1,35 @@
+uuid: 5428fa33-3d07-4ca2-b253-97071a5f860c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.attribute_features_boxes.field_feature
+    - field.field.node.attribute_features_boxes.field_intro_text
+    - node.type.attribute_features_boxes
+  module:
+    - text
+    - user
+id: node.attribute_features_boxes.default
+targetEntityType: node
+bundle: attribute_features_boxes
+mode: default
+content:
+  field_feature:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_intro_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true
+  links: true

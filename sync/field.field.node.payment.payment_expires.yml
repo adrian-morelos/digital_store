@@ -1,0 +1,21 @@
+uuid: e8cfddb6-4ad8-4c9c-bcbb-c1a2eb8776a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_expires
+    - node.type.payment
+id: node.payment.payment_expires
+field_name: payment_expires
+entity_type: node
+bundle: payment
+label: Expires
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: null
+settings: {  }
+field_type: timestamp

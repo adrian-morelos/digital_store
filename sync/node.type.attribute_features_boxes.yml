@@ -1,0 +1,20 @@
+uuid: 2bcb5f51-8869-4717-9673-396389a885db
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store_product
+    - menu_ui
+third_party_settings:
+  digital_store_product:
+    is_product_attribute: 1
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Attribute - Features Boxes'
+type: attribute_features_boxes
+description: 'Product Attribute - Features Boxes.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

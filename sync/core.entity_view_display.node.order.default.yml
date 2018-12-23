@@ -1,0 +1,120 @@
+uuid: 51978773-953e-48b8-9a07-18394bdf3eb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.order.billing_details
+    - field.field.node.order.cart
+    - field.field.node.order.checkout_flow_step
+    - field.field.node.order.completed
+    - field.field.node.order.customer
+    - field.field.node.order.ip_address
+    - field.field.node.order.locked
+    - field.field.node.order.mail
+    - field.field.node.order.order_items
+    - field.field.node.order.order_total_price
+    - field.field.node.order.placed
+    - field.field.node.order.state
+    - field.field.node.order.total_paid
+    - node.type.order
+  module:
+    - address
+    - digital_store
+    - options
+    - user
+_core:
+  default_config_hash: nCODf9AOh66MRYXD7Gip2c9V-25DFe58xTJKvN3X8Is
+id: node.order.default
+targetEntityType: node
+bundle: order
+mode: default
+content:
+  billing_details:
+    type: address_default
+    weight: 7
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  checkout_flow_step:
+    label: above
+    type: list_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  completed:
+    label: above
+    type: timestamp
+    weight: 5
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  customer:
+    label: above
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  ip_address:
+    label: above
+    type: string
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  mail:
+    label: above
+    type: basic_string
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  order_items:
+    type: order_item_table
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  order_total_price:
+    label: hidden
+    type: price_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  placed:
+    label: above
+    type: timestamp
+    weight: 4
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  state:
+    label: above
+    type: list_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  total_paid:
+    type: price_default
+    weight: 10
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cart: true
+  langcode: true
+  links: true
+  locked: true

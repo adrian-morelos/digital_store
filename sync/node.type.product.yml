@@ -1,0 +1,22 @@
+uuid: 1ba8f13a-0192-4983-85fe-221bd9d91f62
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - digital_store
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: 1-SKPDP6LEVSKrkZS4A2nKztBZOJV8wRLxCuIjhfI0o
+name: Product
+type: product
+description: 'Defines the Product entity.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

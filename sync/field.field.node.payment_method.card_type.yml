@@ -1,0 +1,21 @@
+uuid: 2d8e142e-d3df-4139-8acb-b6a375ebef5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.card_type
+    - node.type.payment_method
+  module:
+    - options
+id: node.payment_method.card_type
+field_name: card_type
+entity_type: node
+bundle: payment_method
+label: 'Card type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: list_string

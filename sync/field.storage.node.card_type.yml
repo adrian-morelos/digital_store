@@ -1,0 +1,45 @@
+uuid: 0abf6c34-0697-45ae-a83b-e7b4d41e13ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.card_type
+field_name: card_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: visa
+      label: Visa
+    -
+      value: mastercard
+      label: MasterCard
+    -
+      value: maestro
+      label: Maestro
+    -
+      value: amex
+      label: 'American Express'
+    -
+      value: dinersclub
+      label: 'Diners Club'
+    -
+      value: discover
+      label: 'Discover Card'
+    -
+      value: jcb
+      label: JCB
+    -
+      value: unionpay
+      label: UnionPay
+  allowed_values_function: ''
+module: options
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

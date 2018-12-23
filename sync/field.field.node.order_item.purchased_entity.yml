@@ -1,0 +1,30 @@
+uuid: 812f22f6-d42d-42a1-9407-b8dcc9ad11a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.purchased_entity
+    - node.type.order_item
+    - node.type.price_options
+id: node.order_item.purchased_entity
+field_name: purchased_entity
+entity_type: node
+bundle: order_item
+label: 'The purchased entity.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:node'
+  handler_settings:
+    filter:
+      type: _none
+    target_bundles:
+      price_options: price_options
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,13 @@
+uuid: 4ea42e7a-b5c0-4980-910b-4893144745f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.attribute_header_summary
+_core:
+  default_config_hash: O5nuy319Fh8JU0AX8lSuQoQwgSM6EiHvr_tDdU6XHVc
+id: node.attribute_header_summary
+target_entity_type_id: node
+target_bundle: attribute_header_summary
+default_langcode: site_default
+language_alterable: false

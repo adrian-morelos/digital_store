@@ -1,0 +1,25 @@
+uuid: 2ed1b83f-8e62-4ac0-bb00-1d13385f8f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.attribute_summary
+    - node.type.attribute_header_summary
+  module:
+    - text
+_core:
+  default_config_hash: 8tVUnatbwSkgUaYQjmzoz4jMKMDesaDtGBIurU6YuiE
+id: node.attribute_header_summary.attribute_summary
+field_name: attribute_summary
+entity_type: node
+bundle: attribute_header_summary
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: null
+settings: {  }
+field_type: text_long

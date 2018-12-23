@@ -1,0 +1,17 @@
+uuid: a2cd0630-95a9-49f8-a980-2793c687bbd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: local
+name: Local
+description: 'Local Server'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: partial
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

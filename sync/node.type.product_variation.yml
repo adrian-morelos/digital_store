@@ -1,0 +1,22 @@
+uuid: 07b33f83-985e-4c75-854c-2173fb792793
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - digital_store
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: aRQk3DO3SalBdyLClyHCGuweJpmAFbcOrB2ppClWwaU
+name: 'Product Variation'
+type: product_variation
+description: 'Defines the Product Variation entity.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

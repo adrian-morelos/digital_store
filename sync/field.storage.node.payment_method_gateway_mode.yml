@@ -1,0 +1,21 @@
+uuid: 4d215d80-0fd9-4835-b06e-d7935bbda8b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.payment_method_gateway_mode
+field_name: payment_method_gateway_mode
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

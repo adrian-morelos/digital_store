@@ -1,0 +1,13 @@
+uuid: 065d230c-c985-4d56-8884-454276b18cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.attribute_web_flow
+_core:
+  default_config_hash: MpI6AgMan_SzGz8H_4wS6VIZdc1mYM_oP27l1Kcsj48
+id: node.attribute_web_flow
+target_entity_type_id: node
+target_bundle: attribute_web_flow
+default_langcode: site_default
+language_alterable: false

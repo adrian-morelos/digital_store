@@ -1,0 +1,19 @@
+uuid: 1ca04aaf-cbfe-462e-b5d2-cc68baf82fc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store
+    - node
+id: node.order_total_price
+field_name: order_total_price
+entity_type: node
+type: price
+settings: {  }
+module: digital_store
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

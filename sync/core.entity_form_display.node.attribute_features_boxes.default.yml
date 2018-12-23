@@ -1,0 +1,57 @@
+uuid: 77a5bb40-f07f-4eef-8db5-acb8218a26a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.attribute_features_boxes.field_feature
+    - field.field.node.attribute_features_boxes.field_intro_text
+    - node.type.attribute_features_boxes
+  module:
+    - inline_entity_form
+    - text
+id: node.attribute_features_boxes.default
+targetEntityType: node
+bundle: attribute_features_boxes
+mode: default
+content:
+  field_feature:
+    weight: 2
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: feature
+      label_plural: features
+      collapsible: true
+      allow_new: true
+      match_operator: CONTAINS
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_intro_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

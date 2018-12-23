@@ -1,0 +1,24 @@
+uuid: 4a469034-2e85-47d2-9e0c-bdad06c95f82
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - digital_store_theme
+id: mainnavigation
+theme: digital_store_theme
+region: subheader
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

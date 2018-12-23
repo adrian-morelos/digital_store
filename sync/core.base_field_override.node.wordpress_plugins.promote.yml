@@ -1,0 +1,22 @@
+uuid: b14db5d2-4f5b-4d11-a85c-345feaa6b8c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.wordpress_plugins
+id: node.wordpress_plugins.promote
+field_name: promote
+entity_type: node
+bundle: wordpress_plugins
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

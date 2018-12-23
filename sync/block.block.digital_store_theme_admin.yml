@@ -1,0 +1,26 @@
+uuid: 63d59725-b318-42a2-b013-d7b3ff0cd018
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.admin
+  module:
+    - system
+  theme:
+    - digital_store_theme
+_core:
+  default_config_hash: DWAB7HaAfAJerAmyT8B2K-6qxicu9n0PcKVpDr--N4c
+id: digital_store_theme_admin
+theme: digital_store_theme
+region: footer
+weight: -1
+provider: null
+plugin: 'system_menu_block:admin'
+settings:
+  id: 'system_menu_block:admin'
+  label: Administration
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

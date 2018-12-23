@@ -1,0 +1,23 @@
+uuid: fc099b4d-4f04-4a82-aa80-421b911369a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.state
+    - node.type.order
+  module:
+    - options
+id: node.order.state
+field_name: state
+entity_type: node
+bundle: order
+label: 'Order State'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: draft
+default_value_callback: null
+settings: {  }
+field_type: list_string

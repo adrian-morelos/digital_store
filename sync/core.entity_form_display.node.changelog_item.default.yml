@@ -1,0 +1,70 @@
+uuid: b46a852d-ad5c-4497-b741-0e3705c54cd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.changelog_item.field_date
+    - field.field.node.changelog_item.field_log
+    - field.field.node.changelog_item.field_type
+    - node.type.changelog_item
+  module:
+    - datetime
+id: node.changelog_item.default
+targetEntityType: node
+bundle: changelog_item
+mode: default
+content:
+  field_date:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_log:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

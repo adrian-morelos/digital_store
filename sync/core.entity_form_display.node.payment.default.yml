@@ -1,0 +1,67 @@
+uuid: c3f50329-793d-41a3-b399-b7f0b1a02925
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.payment.payment_amount
+    - field.field.node.payment.payment_authorized
+    - field.field.node.payment.payment_completed
+    - field.field.node.payment.payment_expires
+    - field.field.node.payment.payment_gateway
+    - field.field.node.payment.payment_gateway_mode
+    - field.field.node.payment.payment_method
+    - field.field.node.payment.payment_order_id
+    - field.field.node.payment.payment_refunded_amount
+    - field.field.node.payment.payment_remote_id
+    - field.field.node.payment.payment_remote_state
+    - field.field.node.payment.payment_state
+    - node.type.payment
+_core:
+  default_config_hash: eVPBADXQ-Sw60JAvlQPgRaPQVf4OrU6BjJAlL0XsOJw
+id: node.payment.default
+targetEntityType: node
+bundle: payment
+mode: default
+content:
+  payment_gateway:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      placeholder: ''
+      size: 60
+    region: content
+    third_party_settings: {  }
+  payment_gateway_mode:
+    type: options_select
+    weight: 2
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  payment_amount: true
+  payment_authorized: true
+  payment_completed: true
+  payment_expires: true
+  payment_method: true
+  payment_order_id: true
+  payment_refunded_amount: true
+  payment_remote_id: true
+  payment_remote_state: true
+  payment_state: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

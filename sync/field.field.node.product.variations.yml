@@ -1,0 +1,31 @@
+uuid: 09ad5dbe-b9c6-4c29-aec9-dae86703750f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.variations
+    - node.type.product
+_core:
+  default_config_hash: xgfy_5ySRMWn8aDCgar8YateN8STW2-RxIT0W510SxE
+id: node.product.variations
+field_name: variations
+entity_type: node
+bundle: product
+label: Variations
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:node'
+  handler_settings:
+    filter:
+      type: _none
+    target_bundles:
+      product_variation: product_variation
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 3fbb1fd2-10eb-4598-add6-3f784a5473d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: k0VdN1Il_fCU_jxSS-w9MV-kiR1RRRLq7gScYjoYMtE
+id: node.product_id
+field_name: product_id
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

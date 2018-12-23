@@ -1,0 +1,30 @@
+uuid: f137a313-0089-481c-8147-004cd8cffd29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.order
+    - node.type.order
+    - node.type.order_item
+id: node.order_item.order
+field_name: order
+entity_type: node
+bundle: order_item
+label: 'The back-reference parent order.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:node'
+  handler_settings:
+    filter:
+      type: _none
+    target_bundles:
+      order: order
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

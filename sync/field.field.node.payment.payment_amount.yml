@@ -1,0 +1,23 @@
+uuid: cac33e20-dedc-452a-abc2-4904c8dcab84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_amount
+    - node.type.payment
+  module:
+    - digital_store
+id: node.payment.payment_amount
+field_name: payment_amount
+entity_type: node
+bundle: payment
+label: Amount
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  available_currencies:
+    USD: USD
+field_type: price

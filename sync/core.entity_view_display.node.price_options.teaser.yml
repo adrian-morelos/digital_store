@@ -1,0 +1,41 @@
+uuid: ca698e7a-0b02-42fa-bac7-ba36d0ecc747
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.price_options.field_label
+    - field.field.node.price_options.field_price
+    - field.field.node.price_options.field_product_id
+    - field.field.node.price_options.field_quantity
+    - field.field.node.price_options.field_sku
+    - node.type.price_options
+  module:
+    - digital_store
+    - user
+id: node.price_options.teaser
+targetEntityType: node
+bundle: price_options
+mode: teaser
+content:
+  field_label:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_price:
+    type: price_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_product_id: true
+  field_quantity: true
+  field_sku: true
+  langcode: true
+  links: true

@@ -1,0 +1,17 @@
+uuid: a848e164-953e-4b07-8610-078896af8e12
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Price Options'
+type: price_options
+description: 'Subscription options.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

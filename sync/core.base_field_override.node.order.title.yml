@@ -1,0 +1,20 @@
+uuid: 5347ad26-5122-4feb-9eeb-180682a8b3a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.order
+_core:
+  default_config_hash: gPpU75D09BKmltLPNDMj_PwZ4MlB9btBjr_Zg9rLzsE
+id: node.order.title
+field_name: title
+entity_type: node
+bundle: order
+label: 'Order number'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

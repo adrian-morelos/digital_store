@@ -1,0 +1,23 @@
+uuid: 6df78a00-e90c-42b1-91cb-696463092882
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.attribute_features_boxes.field_feature
+    - node.type.attribute_features_boxes
+  module:
+    - user
+id: node.attribute_features_boxes.teaser
+targetEntityType: node
+bundle: attribute_features_boxes
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_feature: true
+  langcode: true

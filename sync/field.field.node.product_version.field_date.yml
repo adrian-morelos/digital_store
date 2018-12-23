@@ -1,0 +1,24 @@
+uuid: 7d814dae-fd3b-4072-86d3-8f63d3f9a012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.product_version
+  module:
+    - datetime
+id: node.product_version.field_date
+field_name: field_date
+entity_type: node
+bundle: product_version
+label: 'Release Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

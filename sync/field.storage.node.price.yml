@@ -1,0 +1,21 @@
+uuid: f9e17f0f-b681-4eeb-bb34-0c99038d94c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store
+    - node
+_core:
+  default_config_hash: Zrhe9NHq8T5opIpho-cRAtrQ-V0uxehRhuaF10dIfME
+id: node.price
+field_name: price
+entity_type: node
+type: price
+settings: {  }
+module: digital_store
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

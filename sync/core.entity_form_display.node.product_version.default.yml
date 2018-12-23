@@ -1,0 +1,92 @@
+uuid: 90fc6f62-d1ab-4ab2-9651-142e39352296
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_version.body
+    - field.field.node.product_version.field_change_logs
+    - field.field.node.product_version.field_date
+    - field.field.node.product_version.field_file
+    - node.type.product_version
+  module:
+    - datetime
+    - file
+    - inline_entity_form
+    - text
+id: node.product_version.default
+targetEntityType: node
+bundle: product_version
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_change_logs:
+    weight: 5
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Changelog
+      label_plural: 'Change Logs'
+      collapsible: true
+      collapsed: true
+      allow_new: true
+      match_operator: CONTAINS
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_date:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_file:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  langcode:
+    type: language_select
+    weight: 7
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

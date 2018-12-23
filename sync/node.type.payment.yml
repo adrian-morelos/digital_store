@@ -1,0 +1,22 @@
+uuid: 5c662a1f-c169-4696-8207-94e6bfda8a57
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - digital_store
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: D6s6D1ir4c-Wid1_djzFA_gyzA7gBr8vNUkc4Yc0wgI
+name: Payment
+type: payment
+description: 'Defines the payment entity.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

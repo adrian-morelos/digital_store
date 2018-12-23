@@ -1,0 +1,23 @@
+uuid: 8ae66c66-c02a-4063-ad74-1d64ec19a28a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.total_paid
+    - node.type.order
+  module:
+    - digital_store
+id: node.order.total_paid
+field_name: total_paid
+entity_type: node
+bundle: order
+label: 'Total paid'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  available_currencies:
+    USD: USD
+field_type: price

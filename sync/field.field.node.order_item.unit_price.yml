@@ -1,0 +1,23 @@
+uuid: 9777f66f-64f9-4f64-8335-396950e07d8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.unit_price
+    - node.type.order_item
+  module:
+    - digital_store
+id: node.order_item.unit_price
+field_name: unit_price
+entity_type: node
+bundle: order_item
+label: 'Unit price'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  available_currencies:
+    USD: USD
+field_type: price

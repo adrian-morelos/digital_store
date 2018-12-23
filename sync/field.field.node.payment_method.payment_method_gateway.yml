@@ -1,0 +1,31 @@
+uuid: a971408c-57d0-47f1-a7c0-088e56257e6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method_gateway
+    - node.type.payment_method
+    - taxonomy.vocabulary.payment_gateway
+id: node.payment_method.payment_method_gateway
+field_name: payment_method_gateway
+entity_type: node
+bundle: payment_method
+label: 'Payment gateway'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    filter:
+      type: _none
+    target_bundles:
+      payment_gateway: payment_gateway
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: eb0fb156-1ec1-4cc5-a9aa-d48511f205fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 37N3QRVn6_b9pnm1we7rYVTuUduy83FvYVIEJRPo4pk
+id: node.variation_label
+field_name: variation_label
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,16 @@
+uuid: 4e836ba7-9bb6-498f-8ac3-46dd60b465d5
+langcode: en
+status: true
+dependencies: {  }
+id: wordpress_plugin
+label: 'Wordpress Plugin'
+description: ' Extend your WordPress experience with WPUseful plugins. '
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  name: name
+  mimetype: name
+  filesize: name

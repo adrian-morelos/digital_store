@@ -1,0 +1,24 @@
+uuid: de47c265-0f2d-48e4-8fce-2823b1bba78e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.changelog_item
+  module:
+    - datetime
+id: node.changelog_item.field_date
+field_name: field_date
+entity_type: node
+bundle: changelog_item
+label: Date
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

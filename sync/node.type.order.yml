@@ -1,0 +1,22 @@
+uuid: d03c7642-486a-41df-9bcd-40049cb157aa
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - digital_store
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: bu2hLR1zVfwHWOPmWBVPVMjr5SWOpvPetA4rC5zgva0
+name: Order
+type: order
+description: 'Defines the order entity.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,24 @@
+uuid: 00fb454f-191a-4f8e-9618-479ce914fbf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-products
+  module:
+    - system
+  theme:
+    - digital_store_theme
+id: footer_products
+theme: digital_store_theme
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer-products'
+settings:
+  id: 'system_menu_block:footer-products'
+  label: PRODUCTS
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

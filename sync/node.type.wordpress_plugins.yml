@@ -1,0 +1,17 @@
+uuid: 91e63ac8-1c16-4cb3-bf89-a822fced84f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'WordPress Plugins'
+type: wordpress_plugins
+description: 'High Quality Free Plugins For WordPress & WooCommerce.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

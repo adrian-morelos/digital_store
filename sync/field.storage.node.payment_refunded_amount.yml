@@ -1,0 +1,19 @@
+uuid: 8b47cb3d-5a7d-4bc6-9c67-88d233125409
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store
+    - node
+id: node.payment_refunded_amount
+field_name: payment_refunded_amount
+entity_type: node
+type: price
+settings: {  }
+module: digital_store
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

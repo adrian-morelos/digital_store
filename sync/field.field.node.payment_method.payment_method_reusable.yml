@@ -1,0 +1,23 @@
+uuid: a60812aa-8f04-44e6-8810-8d2354c86d43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method_reusable
+    - node.type.payment_method
+id: node.payment_method.payment_method_reusable
+field_name: payment_method_reusable
+entity_type: node
+bundle: payment_method
+label: Reusable
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: null
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

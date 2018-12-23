@@ -1,0 +1,22 @@
+uuid: 8b9bc9b9-370b-44e9-844d-c4382623c046
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - digital_store
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: E7-CZti0wgbKvALokHx7m-IUgkZTiI6paebSoUuUJFw
+name: 'Order Item'
+type: order_item
+description: 'Defines the order item entity.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

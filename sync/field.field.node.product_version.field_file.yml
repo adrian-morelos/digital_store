@@ -1,0 +1,27 @@
+uuid: 687ad213-d2d6-4eb1-88b2-9d5cbbf81e22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.product_version
+  module:
+    - file
+id: node.product_version.field_file
+field_name: field_file
+entity_type: node
+bundle: product_version
+label: File
+description: 'Product File'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt zip'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

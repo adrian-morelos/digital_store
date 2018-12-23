@@ -1,0 +1,16 @@
+uuid: c4b1fc28-1a32-40af-a2d0-8fbe3feb6847
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.wordpress_plugins
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.wordpress_plugins
+target_entity_type_id: node
+target_bundle: wordpress_plugins
+default_langcode: en
+language_alterable: true

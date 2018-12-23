@@ -1,0 +1,18 @@
+uuid: 6890096b-a1e7-41b0-ad82-4fe5e900f0e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.placed
+field_name: placed
+entity_type: node
+type: timestamp
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

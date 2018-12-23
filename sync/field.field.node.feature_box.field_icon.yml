@@ -1,0 +1,21 @@
+uuid: 3e61771c-6d3a-4cec-bf92-cc85966bd449
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon
+    - node.type.feature_box
+  module:
+    - text
+id: node.feature_box.field_icon
+field_name: field_icon
+entity_type: node
+bundle: feature_box
+label: Icon
+description: 'SVG Featured Icon'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

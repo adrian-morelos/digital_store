@@ -1,0 +1,21 @@
+uuid: 990ca492-3035-42d5-a281-2b80bd8b8cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_gateway_mode
+    - node.type.payment
+  module:
+    - options
+id: node.payment.payment_gateway_mode
+field_name: payment_gateway_mode
+entity_type: node
+bundle: payment
+label: 'Payment gateway mode'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: list_string

@@ -1,0 +1,11 @@
+uuid: a836c866-3b37-4074-acdd-77cabc697bd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.price_options
+id: node.price_options
+target_entity_type_id: node
+target_bundle: price_options
+default_langcode: en
+language_alterable: true

@@ -1,0 +1,21 @@
+uuid: aedbb915-a43f-4746-92fc-710c2c9e077f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.attribute_features_boxes
+  module:
+    - text
+id: node.attribute_features_boxes.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: attribute_features_boxes
+label: 'Intro Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

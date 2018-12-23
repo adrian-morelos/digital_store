@@ -1,0 +1,21 @@
+uuid: d8e97374-5bec-4c24-b870-fe117a3608c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.variation_label
+    - node.type.product_variation
+_core:
+  default_config_hash: BxHXyhmiWXdM4Stuabi4P1tMzl32Hd38wP7WMrHz5G4
+id: node.product_variation.variation_label
+field_name: variation_label
+entity_type: node
+bundle: product_variation
+label: Label
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: string

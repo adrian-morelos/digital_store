@@ -1,0 +1,19 @@
+uuid: d5c235b8-dafc-4a82-8546-b0e19ec051a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - digital_store_product
+    - node
+id: node.field_product_pricing_config
+field_name: field_product_pricing_config
+entity_type: node
+type: product_pricing_config
+settings: {  }
+module: digital_store_product
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

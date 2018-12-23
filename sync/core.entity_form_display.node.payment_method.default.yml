@@ -1,0 +1,83 @@
+uuid: 95a56597-e0cb-47da-a767-a77d37a87ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.payment_method.card_exp_month
+    - field.field.node.payment_method.card_exp_year
+    - field.field.node.payment_method.card_number
+    - field.field.node.payment_method.card_type
+    - field.field.node.payment_method.payment_method_billing_profile
+    - field.field.node.payment_method.payment_method_expires
+    - field.field.node.payment_method.payment_method_gateway
+    - field.field.node.payment_method.payment_method_gateway_mode
+    - field.field.node.payment_method.payment_method_is_default
+    - field.field.node.payment_method.payment_method_owner
+    - field.field.node.payment_method.payment_method_remote_id
+    - field.field.node.payment_method.payment_method_reusable
+    - node.type.payment_method
+_core:
+  default_config_hash: I2VLzaZTp5Wrw0Wk4SYNTBqC-cBy9NfCcSM0FnXYJDo
+id: node.payment_method.default
+targetEntityType: node
+bundle: payment_method
+mode: default
+content:
+  payment_method_gateway:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      placeholder: ''
+      size: 60
+    region: content
+    third_party_settings: {  }
+  payment_method_gateway_mode:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  payment_method_is_default:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  payment_method_owner:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  card_exp_month: true
+  card_exp_year: true
+  card_number: true
+  card_type: true
+  created: true
+  langcode: true
+  path: true
+  payment_method_billing_profile: true
+  payment_method_expires: true
+  payment_method_remote_id: true
+  payment_method_reusable: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

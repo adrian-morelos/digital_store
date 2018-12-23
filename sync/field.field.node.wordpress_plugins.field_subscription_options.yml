@@ -1,0 +1,29 @@
+uuid: a0aa7964-04fc-42b2-8d30-d1430ab20227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subscription_options
+    - node.type.price_options
+    - node.type.wordpress_plugins
+id: node.wordpress_plugins.field_subscription_options
+field_name: field_subscription_options
+entity_type: node
+bundle: wordpress_plugins
+label: 'Subscription options'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      price_options: price_options
+    sort:
+      field: field_quantity
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: price_options
+field_type: entity_reference
