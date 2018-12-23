@@ -192,7 +192,6 @@ class AnalyticsClient implements AnalyticsClientInterface {
       'headers' => $this->getHeaders(),
       'form_params' => $fields,
     ];
-    ksm($options);
     try {
       $response = $this->post($options);
       $result = ($response->getStatusCode() == 200);
