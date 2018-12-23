@@ -1,0 +1,29 @@
+uuid: 57c4bdbb-1cbe-474e-a0d2-71a2a2303395
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.widget_two_col_featured_image.field_widget_cta
+    - field.field.node.widget_two_col_featured_image.field_widget_featured_image
+    - field.field.node.widget_two_col_featured_image.field_widget_summary
+    - field.field.node.widget_two_col_featured_image.field_widget_title
+    - node.type.widget_two_col_featured_image
+  module:
+    - user
+id: node.widget_two_col_featured_image.teaser
+targetEntityType: node
+bundle: widget_two_col_featured_image
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_widget_cta: true
+  field_widget_featured_image: true
+  field_widget_summary: true
+  field_widget_title: true
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: cecc5f34-e2c2-4789-870d-af3f01b4bb73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widget_summary
+    - node.type.widget_two_col_featured_image
+  module:
+    - text
+id: node.widget_two_col_featured_image.field_widget_summary
+field_name: field_widget_summary
+entity_type: node
+bundle: widget_two_col_featured_image
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 5c6d91a5-309f-4633-9248-5a9e9b8b97ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_widget_cta
+field_name: field_widget_cta
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

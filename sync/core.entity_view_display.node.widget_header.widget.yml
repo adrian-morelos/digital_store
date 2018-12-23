@@ -1,0 +1,34 @@
+uuid: c54069a9-cc77-4548-9c29-1e4b6d494650
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.widget
+    - field.field.node.widget_header.field_widget_header
+    - field.field.node.widget_header.field_widget_subheader
+    - node.type.widget_header
+  module:
+    - text
+    - user
+id: node.widget_header.widget
+targetEntityType: node
+bundle: widget_header
+mode: widget
+content:
+  field_widget_header:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_widget_subheader:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

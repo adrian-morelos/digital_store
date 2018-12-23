@@ -1,0 +1,59 @@
+uuid: 8000550b-56ac-49ac-b42a-05c86aa9fb8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.widget
+    - field.field.node.widget_two_col_featured_image.field_widget_cta
+    - field.field.node.widget_two_col_featured_image.field_widget_featured_image
+    - field.field.node.widget_two_col_featured_image.field_widget_summary
+    - field.field.node.widget_two_col_featured_image.field_widget_title
+    - node.type.widget_two_col_featured_image
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.widget_two_col_featured_image.widget
+targetEntityType: node
+bundle: widget_two_col_featured_image
+mode: widget
+content:
+  field_widget_cta:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_widget_featured_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_widget_summary:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_widget_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true
+  links: true

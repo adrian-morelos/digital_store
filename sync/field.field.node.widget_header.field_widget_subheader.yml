@@ -1,0 +1,21 @@
+uuid: c55f99c8-5f2d-44c5-8b27-5cb63dcff01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widget_subheader
+    - node.type.widget_header
+  module:
+    - text
+id: node.widget_header.field_widget_subheader
+field_name: field_widget_subheader
+entity_type: node
+bundle: widget_header
+label: Subheader
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

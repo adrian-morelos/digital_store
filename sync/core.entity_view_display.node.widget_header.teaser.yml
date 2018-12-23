@@ -1,16 +1,15 @@
-uuid: cbbd10de-f35a-410c-91e5-e413e3d0cf3c
+uuid: 6cf521e3-02b8-490a-ae17-87a514d0b463
 langcode: en
 status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.landing_page.field_widget
-    - node.type.landing_page
+    - node.type.widget_header
   module:
     - user
-id: node.landing_page.teaser
+id: node.widget_header.teaser
 targetEntityType: node
-bundle: landing_page
+bundle: widget_header
 mode: teaser
 content:
   links:
@@ -19,5 +18,4 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_widget: true
   langcode: true

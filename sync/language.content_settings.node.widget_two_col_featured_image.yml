@@ -1,0 +1,11 @@
+uuid: eb0a044b-00cb-423d-89f7-1d243e26cc10
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.widget_two_col_featured_image
+id: node.widget_two_col_featured_image
+target_entity_type_id: node
+target_bundle: widget_two_col_featured_image
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,18 @@
+uuid: f642d0d5-3387-4653-92e8-3bf4f9a08e69
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.widget_header
+id: node.widget_header.title
+field_name: title
+entity_type: node
+bundle: widget_header
+label: 'Admin Label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

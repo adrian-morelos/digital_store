@@ -3,85 +3,68 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.body
+    - core.entity_form_mode.node.widget
+    - field.field.node.landing_page.field_widget
     - node.type.landing_page
   module:
+    - inline_entity_form
     - path
-    - text
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
+  field_widget:
+    weight: 5
     settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
+      form_mode: widget
+      override_labels: true
+      label_singular: Widget
+      label_plural: Widgets
+      allow_new: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
     third_party_settings: {  }
+    type: inline_entity_form_complex
     region: content
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 2
     region: content
     settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 15
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 16
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

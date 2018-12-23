@@ -1,0 +1,10 @@
+uuid: d3ed4354-ffac-4211-8676-aeb425f42a12
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.widget
+label: Widget
+targetEntityType: node
+cache: true

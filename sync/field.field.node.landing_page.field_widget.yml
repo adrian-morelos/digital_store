@@ -1,0 +1,30 @@
+uuid: c6309d07-da69-4d20-b008-cdca328a59ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widget
+    - node.type.landing_page
+    - node.type.widget_header
+    - node.type.widget_two_col_featured_image
+id: node.landing_page.field_widget
+field_name: field_widget
+entity_type: node
+bundle: landing_page
+label: Widget
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      widget_header: widget_header
+      widget_two_col_featured_image: widget_two_col_featured_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: widget_header
+field_type: entity_reference

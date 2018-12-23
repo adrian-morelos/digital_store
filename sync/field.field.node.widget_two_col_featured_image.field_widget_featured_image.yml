@@ -1,0 +1,38 @@
+uuid: 8ef9d68b-c31d-496a-aa58-a96c5a0571d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widget_featured_image
+    - node.type.widget_two_col_featured_image
+  module:
+    - image
+id: node.widget_two_col_featured_image.field_widget_featured_image
+field_name: field_widget_featured_image
+entity_type: node
+bundle: widget_two_col_featured_image
+label: 'Featured Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
