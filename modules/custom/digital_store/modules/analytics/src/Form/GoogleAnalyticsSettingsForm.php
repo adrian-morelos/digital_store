@@ -57,8 +57,8 @@ class GoogleAnalyticsSettingsForm extends ConfigFormBase {
     if (isset($values['tid']) && !empty($values['tid'])) {
       $config->set('tid', $values['tid']);
     }
-    if (isset($values['secret_key']) && !empty($values['secret_key'])) {
-      $config->set('secret_key', $values['secret_key']);
+    if (isset($values['protocol_version']) && !empty($values['protocol_version'])) {
+      $config->set('protocol_version', $values['protocol_version']);
     }
     $config->save();
     parent::submitForm($form, $form_state);

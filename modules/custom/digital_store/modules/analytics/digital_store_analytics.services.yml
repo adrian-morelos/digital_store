@@ -1,0 +1,9 @@
+services:
+  digital_store_analytics.ga_client:
+    class: Drupal\digital_store_analytics\AnalyticsClient
+    arguments: ['@config.factory']
+  digital_store_analytics.event_subscriber:
+    class: Drupal\digital_store_analytics\EventSubscriber\TrackingSubscriber
+    arguments: ['@digital_store_analytics.ga_client', '@current_user']
+    tags:
+      - {name: event_subscriber}
