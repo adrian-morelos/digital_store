@@ -59,7 +59,6 @@ class DigitalStoreAssetLibraries {
       // Stop Here.
       return;
     }
-    ksm($items);
     foreach ($items as $delta => $bundle) {
       // Get stylesheet content.
       $styles = $this->getCssFilePath($bundle, $theme_path, TRUE);
