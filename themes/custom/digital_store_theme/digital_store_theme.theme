@@ -210,6 +210,27 @@ function digital_store_theme_preprocess_image(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_field().
+ *
+ * Adds the "title" variable so that the current page can be added as a breadcrumb.
+ */
+function digital_store_theme_preprocess_field(&$variables) {
+  $field_name = $variables['element']['#field_name'] ?? NULL;
+  if ($field_name == 'field_widget_cta') {
+    $link_options = [
+      'attributes' => [
+        'class' => [
+          'cta',
+        ],
+      ],
+    ];
+    /* @var Drupal\Core\Url $url */
+    $url = &$variables['items'][0]['content']['#url'];
+    $url->setOptions($link_options);
+  }
+}
+
+/**
  * Implements hook_preprocess_breadcrumb().
  *
  * Adds the "title" variable so that the current page can be added as a breadcrumb.

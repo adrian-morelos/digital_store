@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.widget_two_col_featured_image.field_widget_featured_image
     - field.field.node.widget_two_col_featured_image.field_widget_summary
     - field.field.node.widget_two_col_featured_image.field_widget_title
+    - image.style.widget_two_col_featured_image
     - node.type.widget_two_col_featured_image
   module:
     - image
@@ -35,7 +36,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: ''
+      image_style: widget_two_col_featured_image
       image_link: ''
     third_party_settings: {  }
     type: image

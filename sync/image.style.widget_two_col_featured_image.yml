@@ -1,0 +1,7 @@
+uuid: cec08928-aaf8-44ad-addc-3c39017c4f09
+langcode: en
+status: true
+dependencies: {  }
+name: widget_two_col_featured_image
+label: 'Widget - Two Col Featured Image'
+effects: {  }
