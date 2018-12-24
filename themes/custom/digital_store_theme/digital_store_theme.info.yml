@@ -14,5 +14,8 @@ regions:
   content: 'Content'
   footer: 'Footer'
 
+libraries:
+  - 'digital_store_theme/fonts'
+
 libraries-override:
   system/base: false

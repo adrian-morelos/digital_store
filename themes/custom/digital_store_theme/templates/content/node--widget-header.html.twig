@@ -69,7 +69,10 @@
  *   rendered twice on a page this is invalid CSS for example: two lists
  *   in different view modes.
  */
-#}
 <section class='h t-c c'>
+    {{ content }}
+</section>
+#}
+<section style="text-align: center;">
     {{ content }}
 </section>

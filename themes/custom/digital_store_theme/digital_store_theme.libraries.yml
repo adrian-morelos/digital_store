@@ -1,0 +1,4 @@
+fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Ubuntu:400,500': { type: external, minified: true }
