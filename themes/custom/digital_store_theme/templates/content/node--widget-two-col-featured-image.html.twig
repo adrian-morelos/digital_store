@@ -70,15 +70,13 @@
  *   in different view modes.
  */
 #}
-<section class='t-c-f-i c'>
-    <div class='r'>
-        <div class='col-md-6'>
-            {{ content.field_widget_title }}
-            {{ content.field_widget_summary }}
-            {{ content.field_widget_cta }}
-        </div>
-        <div class='col-md-6'>
-            {{ content.field_widget_featured_image }}
-        </div>
+<section class='t-c-f-i c' style="max-width: 1140px; width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
+    <div style="float: left; width: 47.3684211%; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px;">
+        {{ content.field_widget_title }}
+        {{ content.field_widget_summary }}
+        {{ content.field_widget_cta }}
+    </div>
+    <div style="float: left; width: 47.3684211%; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px;">
+        {{ content.field_widget_featured_image }}
     </div>
 </section>
