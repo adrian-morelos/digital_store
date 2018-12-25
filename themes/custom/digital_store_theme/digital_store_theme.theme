@@ -67,7 +67,9 @@ function digital_store_theme_preprocess_page(&$variables) {
  * Add template suggestions and classes
  */
 function digital_store_theme_preprocess_node(&$variables) {
-  ksm($variables);
+  dump($variables['is_mobile']);
+  dump($variables['is_tablet']);
+  dump($variables['is_desktop']);
   // Node entity.
   $node = $variables['node'];
   /* @var \Drupal\node\NodeInterface $node */
