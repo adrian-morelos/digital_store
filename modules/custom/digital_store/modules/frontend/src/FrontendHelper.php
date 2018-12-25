@@ -65,9 +65,9 @@ class FrontendHelper implements FrontendHelperInterface {
     $is_tablet = $this->isTablet() ? '1' : '0';
     $is_desktop = $this->isDesktop() ? '1' : '0';
     return [
-      'is_mobile' . $is_mobile,
-      'is_tablet' . $is_tablet,
-      'is_desktop' . $is_desktop,
+      'is_mobile_' . $is_mobile,
+      'is_tablet_' . $is_tablet,
+      'is_desktop_' . $is_desktop,
     ];
   }
 
