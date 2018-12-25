@@ -64,19 +64,36 @@
  *   is an administrator.
  *
  * @see template_preprocess_node()
- *
- * @todo Remove the id attribute (or make it a class), because if that gets
- *   rendered twice on a page this is invalid CSS for example: two lists
- *   in different view modes.
  */
 #}
-<section class='t-c-f-i c' style="max-width: 1140px; width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
-    <div style="float: left; width: 47.3684211%; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px;">
+{% if is_mobile %}
+    <section style="padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
         {{ content.field_widget_title }}
         {{ content.field_widget_summary }}
         {{ content.field_widget_cta }}
-    </div>
-    <div style="float: left; width: 47.3684211%; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px;">
         {{ content.field_widget_featured_image }}
-    </div>
-</section>
+    </section>
+{% elseif is_tablet %}
+    <section style="padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
+        {{ content.field_widget_title }}
+        {{ content.field_widget_summary }}
+        {{ content.field_widget_cta }}
+        {{ content.field_widget_featured_image }}
+    </section>
+{% elseif is_desktop %}
+    <section style="max-width: 1140px; width: 100%; margin-right: auto; margin-left: auto;">
+        <div style="float: left; width: 50%;">
+            <div style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px;">
+                {{ content.field_widget_title }}
+                {{ content.field_widget_summary }}
+                {{ content.field_widget_cta }}
+            </div>
+        </div>
+        <div style="float: left; width: 50%;">
+            <div style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px;">
+                {{ content.field_widget_featured_image }}
+            </div>
+        </div>
+    </section>
+{% endif %}
+

@@ -1,1 +1,18 @@
-﻿
+﻿html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+header::before,
+header::after,
+section::before,
+section::after {
+    display: table;
+    content: " ";
+    clear: both;
+}

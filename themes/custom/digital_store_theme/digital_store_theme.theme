@@ -13,45 +13,30 @@ function digital_store_theme_preprocess_html(&$variables) {
   $language = \Drupal::languageManager()->getCurrentLanguage();
   $site_language = $language->getId();
   $site_language_direction = $language->getDirection();
-  $request = \Drupal::request();
-
   // Clean up the lang attributes
   $variables['html_attributes'] = 'lang="' . $site_language . '" dir="' . $site_language_direction . '"';
-
-  // Classes for body element. Allows advanced theming based on context
-  $is_front_page = \Drupal::service('path.matcher')->isFrontPage();
-  if (!$is_front_page) {
-    $path = trim($request->getRequestUri(), '/');
-    // Add unique class for each website section.
-    $arg = explode('/', $path);
-    $section = $arg[0];
-    if ($arg[0] == 'node' && isset($arg[1])) {
-      if ($arg[1] == 'add') {
-        $section = 'node-add';
-      }
-      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
-        $section = 'node-' . $arg[2];
-      }
-    }
-    $variables['attributes']['class'][] = \Drupal\Component\Utility\Html::getClass('section-' . $section);
-  }
-
-  // Store the menu item since it has some useful information.
-  if ($request->attributes->get('view_id')) {
-    $variables['attributes']['class'][] = 'views-page';
-  }
-  elseif ($request->attributes->get('panel')) {
-    $variables['attributes']['class'][] = 'panels-page';
-  }
-  // If on a node add or edit page, add a node-layout class.
-  $current_path = \Drupal::service('path.current')->getPath();
-  if ($current_path == "/product-category/plugins") {
-    $variables['#attached']['library'][] = 'digital_store_theme/product_category_plugins';
-  }
   $site_config = \Drupal::config('system.site');
   $variables['logo'] = theme_get_setting('logo.url');
   $variables['site_name'] = $site_config->get('name');
   $variables['site_slogan'] = $site_config->get('slogan');
+}
+
+/**
+ * Implements hook_theme_suggestions_html_alter().
+ */
+function digital_store_theme_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'html__' . $node->bundle();
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function digital_store_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
 }
 
 /**
@@ -104,7 +89,7 @@ function digital_store_theme_page_attachments_alter(&$page) {
         'http-equiv' => 'x-ua-compatible',
       ],
     ],
-    'chrome_frame'
+    'chrome_frame',
   ];
 
   // Remove image toolbar in IE.
@@ -117,7 +102,7 @@ function digital_store_theme_page_attachments_alter(&$page) {
         'content' => 'false',
       ],
     ],
-    'ie_image_toolbar'
+    'ie_image_toolbar',
   ];
 
   // Prevent Google from indexing the site.
@@ -130,7 +115,7 @@ function digital_store_theme_page_attachments_alter(&$page) {
         'content' => 'noindex',
       ],
     ],
-    'robots_noindex'
+    'robots_noindex',
   ];
 }
 
@@ -238,6 +223,7 @@ function digital_store_theme_preprocess_field(&$variables) {
 function digital_store_theme_preprocess_breadcrumb(&$variables) {
   $request = \Drupal::request();
   $route_match = \Drupal::routeMatch();
-  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+  $title = \Drupal::service('title_resolver')
+    ->getTitle($request, $route_match->getRouteObject());
   $variables['title'] = $title;
 }

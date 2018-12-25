@@ -73,15 +73,13 @@
     {{ content }}
 </section>
 #}
-<section style="text-align: center;">
+{% if is_mobile %}
+    {%  set style = 'text-align: center;' %}
+{% elseif is_tablet %}
+    {%  set style = 'text-align: center;' %}
+{% elseif is_desktop %}
+    {%  set style = 'text-align: center;' %}
+{% endif %}
+<section style="{{ style }}">
     {{ content }}
 </section>
-<h3 style="text-align: center;">
-    is_mobile {{ is_mobile }}
-</h3>
-<h3 style="text-align: center;">
-    is_tablet {{ is_tablet }}
-</h3>
-<h3 style="text-align: center;">
-    is_desktop {{ is_desktop }}
-</h3>

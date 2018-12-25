@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% set style = 'color:#6c757d;font-size:1em;font-weight:300;line-height:2em;margin: 2.125em 1.5em;text-align:center;width:auto;border:none;padding:inherit;display:initial;text-decoration:none;white-space:nowrap;user-select:none;-webkit-tap-highlight-color:transparent;' %}
+{% set link_attributes = create_attribute({'style': style}) %}
+<ul style="list-style:none;justify-content: center; align-items: center; margin-bottom: 0; margin-top: 0; flex-wrap: wrap; display: flex; padding: 0;">
+    {% for item in items %}
+        <li{{ item.attributes }}>
+            {{ link(item.title, item.url, link_attributes) }}
+            {% if item.below %}
+                {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

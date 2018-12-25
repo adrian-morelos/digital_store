@@ -9,7 +9,9 @@ screenshot: screenshot.svg
 base theme: false
 
 regions:
-  header: 'Header'
+  header_left: 'Header Left'
+  header_middle: 'Header Middle'
+  header_right: 'Header Right'
   subheader: 'Sub-Header'
   content: 'Content'
   footer: 'Footer'
