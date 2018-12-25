@@ -10,8 +10,8 @@ dependencies:
     - digital_store_theme
 id: mainnavigation
 theme: digital_store_theme
-region: subheader
-weight: -6
+region: header_middle
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

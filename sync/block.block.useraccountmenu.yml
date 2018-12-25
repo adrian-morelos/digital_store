@@ -10,8 +10,8 @@ dependencies:
     - digital_store_theme
 id: useraccountmenu
 theme: digital_store_theme
-region: header
-weight: -5
+region: header_right
+weight: -7
 provider: null
 plugin: 'system_menu_block:account'
 settings:
