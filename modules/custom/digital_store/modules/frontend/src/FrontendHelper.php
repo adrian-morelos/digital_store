@@ -32,7 +32,7 @@ class FrontendHelper implements FrontendHelperInterface {
     if (!$mobile_detect) {
       return FALSE;
     }
-    return $mobile_detect->isMobile();
+    return $mobile_detect->isMobile() && (!$mobile_detect->isTablet());
   }
 
   /**
