@@ -28,30 +28,33 @@ class FrontendHelper implements FrontendHelperInterface {
    * {@inheritdoc}
    */
   public function isMobile() {
-    if (!$this->mobileDetect) {
+    $mobile_detect = $this->getMobileDetect();
+    if (!$mobile_detect) {
       return FALSE;
     }
-    return $this->mobileDetect->isMobile();
+    return $mobile_detect->isMobile();
   }
 
   /**
    * {@inheritdoc}
    */
   public function isTablet() {
-    if (!$this->mobileDetect) {
+    $mobile_detect = $this->getMobileDetect();
+    if (!$mobile_detect) {
       return FALSE;
     }
-    return $this->mobileDetect->isTablet();
+    return $mobile_detect->isTablet();
   }
 
   /**
    * {@inheritdoc}
    */
   public function isDesktop() {
-    if (!$this->mobileDetect) {
+    $mobile_detect = $this->getMobileDetect();
+    if (!$mobile_detect) {
       return TRUE;
     }
-    return (!$this->mobileDetect->isMobile()) && (!$this->mobileDetect->isTablet());
+    return (!$mobile_detect->isMobile()) && (!$mobile_detect->isTablet());
   }
 
 }
