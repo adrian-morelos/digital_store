@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Provides Frontend features.
+ */
+
+/**
+ * Implements hook_template_preprocess_default_variables_alter().
+ */
+function digital_store_frontend_template_preprocess_default_variables_alter(&$variables) {
+  $frontend_helper = \Drupal::service('digital_store_frontend.helper');
+  $variables['is_mobile'] = $frontend_helper->isMobile();
+  $variables['is_tablet'] = $frontend_helper->isTablet();
+  $variables['is_desktop'] = $frontend_helper->isDesktop();
+}

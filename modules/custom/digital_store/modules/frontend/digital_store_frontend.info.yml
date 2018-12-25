@@ -1,0 +1,7 @@
+name: Digital Store Frontend
+type: module
+description: 'Provides Frontend features.'
+package: Digital Store
+core: 8.x
+dependencies:
+  - digital_store:digital_store

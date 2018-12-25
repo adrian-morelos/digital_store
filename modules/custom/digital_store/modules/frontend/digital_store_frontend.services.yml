@@ -1,0 +1,4 @@
+services:
+  digital_store_frontend.helper:
+    class: Drupal\digital_store_frontend\FrontendHelper
+    arguments: []
