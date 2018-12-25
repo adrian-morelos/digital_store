@@ -14,6 +14,7 @@ module:
   digital_store_analytics: 0
   digital_store_cart: 0
   digital_store_checkout: 0
+  digital_store_frontend: 0
   digital_store_order: 0
   digital_store_payment: 0
   digital_store_price: 0

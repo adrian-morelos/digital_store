@@ -2,6 +2,8 @@ uuid: 865105b1-00e8-43a4-8027-bf2576d28081
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   theme:
     - digital_store_theme
 _core:
@@ -19,4 +21,11 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
