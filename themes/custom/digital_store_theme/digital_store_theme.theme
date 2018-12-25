@@ -71,11 +71,6 @@ function digital_store_theme_preprocess_node(&$variables) {
   $node = $variables['node'];
   /* @var \Drupal\node\NodeInterface $node */
   $bundle = $node->bundle();
-  if ($bundle == 'landing_page') {
-    dump($variables['is_mobile']);
-    dump($variables['is_tablet']);
-    dump($variables['is_desktop']);
-  }
   // Add node--node_type--view_mode.html.twig suggestions
   $variables['theme_hook_suggestions'][] = 'node__' . $bundle . '__' . $variables['view_mode'];
   // Add node--view_mode.html.twig suggestions
