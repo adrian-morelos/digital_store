@@ -12,6 +12,7 @@ use Drupal\node\NodeInterface;
  * Implements hook_template_preprocess_default_variables_alter().
  */
 function digital_store_frontend_template_preprocess_default_variables_alter(&$variables) {
+  /* @var \Drupal\digital_store_frontend\FrontendHelperInterface $frontend_helper */
   $frontend_helper = \Drupal::service('digital_store_frontend.helper');
   $variables['is_mobile'] = $frontend_helper->isMobile();
   $variables['is_tablet'] = $frontend_helper->isTablet();

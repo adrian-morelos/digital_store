@@ -3,9 +3,9 @@
 namespace Drupal\digital_store_cart\Cache\Context;
 
 use Drupal\digital_store_cart\CartProviderInterface;
-use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Cache\Context\CacheContextInterface;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Cache\CacheableMetadata;
 
 /**
  * Defines the CartCacheContext service, for "per cart" caching.
