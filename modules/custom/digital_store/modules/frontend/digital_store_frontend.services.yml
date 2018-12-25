@@ -2,3 +2,8 @@ services:
   digital_store_frontend.helper:
     class: Drupal\digital_store_frontend\FrontendHelper
     arguments: []
+  cache_context.device:
+    class: Drupal\digital_store_frontend\Cache\Context\DeviceCacheContext
+    arguments: ['@digital_store_frontend.helper']
+    tags:
+      - { name: cache.context }
